@@ -12,7 +12,23 @@ boolean moderator
 id
 title
 content
-author
+authorid
+
+-- comment
+blogid
+postid
+authorid
+content
+timestamp
+
+-- divisions
+id
+name
+
+-- players
+id
+divisionid
+
 
 -- profile
 id

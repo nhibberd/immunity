@@ -2,11 +2,8 @@ package immunity.http.marshall;
 
 import com.google.gson.Gson;
 import immunity.data.blog.Blog;
-import immunity.data.core.Empty;
+import immunity.data.core.*;
 import immunity.data.core.Error;
-import immunity.data.core.Function;
-import immunity.data.core.Function2;
-import immunity.data.core.Status;
 import immunity.db.Connector;
 
 import javax.servlet.http.HttpServletRequest;
@@ -20,10 +17,10 @@ public class ActionMarshaller<A> {
     private final Gson gson = new Gson();
     private final Empty empty = new Empty();
     private final Class<A> source;
-    private final Function2<Connection, A, Status> service;
+    private final Action2<Connection, A> service;
     private final Connector connector;
 
-    public ActionMarshaller(Class<A> source, Function2<Connection, A, Status> service, Connector connector) {
+    public ActionMarshaller(Class<A> source, Action2<Connection, A> service, Connector connector) {
         this.source = source;
         this.service = service;
         this.connector = connector;
@@ -31,27 +28,13 @@ public class ActionMarshaller<A> {
 
     public void marshal(HttpServletRequest req, HttpServletResponse resp) {
         final A a = read(req);
-
-        Blog x = (Blog) a;
-        System.out.println("x.content = " + x.type);
-        System.out.println("x.content = " + x.title);
-        System.out.println("x.content = " + x.content);
-
-
         try {
-            Status b = connector.withConnection(new Function<Connection, Status>() {
-                public Status apply(Connection connection) {
-                    return service.apply(connection, a);
+            connector.withConnection(new Action<Connection>() {
+                public void apply(Connection connection) {
+                    service.apply(connection, a);
                 }
             });
-            if (b == Status.OK)
-                write(resp, empty, HttpServletResponse.SC_OK);
-            else if (b == Status.NOT_FOUND)
-                write(resp, empty, HttpServletResponse.SC_NOT_FOUND);
-            else if (b == Status.NOT_AUTH)
-                write(resp, empty, HttpServletResponse.SC_UNAUTHORIZED);
-            else if (b == Status.BAD_REQUEST)
-                write(resp, empty, HttpServletResponse.SC_BAD_REQUEST);
+            write(resp, empty, HttpServletResponse.SC_OK);
         } catch (Exception e) {
             Error error = new Error(e.getClass().getSimpleName(), e.getMessage());
             write(resp, error, HttpServletResponse.SC_INTERNAL_SERVER_ERROR);

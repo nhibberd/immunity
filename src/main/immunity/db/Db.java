@@ -117,21 +117,6 @@ public class Db {
         });
     }
 
-    public List<Blog> queryBlog(Connection connection, String sql){
-        return statement.withStatement(connection, sql, new Function<PreparedStatement, List<Blog>>() {
-            public List<Blog> apply(PreparedStatement preparedStatement) {
-                List<Blog> list = new ArrayList<Blog>();
-                EdgePreparedStatement q = new EdgePreparedStatement(preparedStatement);
-                EdgeResultSet z = new EdgeResultSet(q);
-                while (z.next()) {
-                    list.add(new Blog(z.getString(1), z.getString(2), z.getString(3), z.getString(4), z.getLong(5)));
-                }
-                return list;
-            }
-        });
-    }
-
-
     public Result<String> queryStringFromObject(Connection connection, String sql, final Object data, final Integer column) {
         return statement.withStatement(connection, sql, new Function<PreparedStatement, Result<String>>() {
             public Result<String> apply(PreparedStatement preparedStatement) {

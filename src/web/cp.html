@@ -1,0 +1,165 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Team Immunity</title>
+
+    <link href="./css/main.css" rel="stylesheet">
+    <script src="./js/jquery-1.7.2.min.js"></script>
+    <script src="./js/json2.js"></script>
+    <script src="./js/focus.js"></script>
+    <script src="./js/DialogManager.js"></script>
+
+    <style>
+        .form-line{text-align: left; clear:both;padding:10px;margin:0px;display:block;width:97%;width:-moz-available;position:relative}
+        .form-label-left{width:100px; float:left;display:inline-block;text-align:left;padding:3px;white-space:normal}
+        .form-section,.form-section-closed{list-style:none;list-style-position:outside;margin:0px;padding:0px;position:relative;zoom:1;clear:both}
+        .form-input{display:inline-block}
+        .form-header{margin:0px}
+        .form-textarea{width:94% !important}
+        .form-textbox,.form-textarea,.form-dropdown,.form-list{border:1px solid #555;padding:4px;-webkit-border-radius:5px 5px;-webkit-box-shadow:0 2px 4px rgba(0,0,0, 0.4) inset;-moz-border-radius:5px 5px;-moz-box-shadow:0 2px 4px rgba(0,0,0, 0.4) inset;border-radius:5px 5px;box-shadow:0 2px 4px rgba(0,0,0, 0.4) inset}
+        .form-submit-button,.form-submit-reset{font-size:18px;line-height:30px}
+
+    </style>
+    <script language="JavaScript">
+        function setVisibility(id, btn, one, two) {
+            if(document.getElementById(btn).value==two){
+                document.getElementById(btn).value = one;
+                document.getElementById(id).style.display = 'none';
+            }else{
+                document.getElementById(btn).value = two;
+                document.getElementById(id).style.display = 'inline';
+            }
+        }
+    </script>
+
+
+</head>
+
+<body>
+<div id="wrapper">
+
+    <div id="outerheader">
+        <script type="text/javascript">
+            $('#outerheader').load('./index.html #header');
+        </script>
+    </div> <!-- /header -->
+
+
+
+    <div id="content" style="min-height: 100%" >
+        <div class="adminbuttons">
+            <input id="post" type=button name=type value='Front page post' onclick="setVisibility('frontpost', 'post', 'Front Page Post', 'Cancel Post');";>
+        </div>
+
+        <div id="frontpost" style="display: none;" >
+            <form id="postform">
+                <ul class="form-section">
+                    <li class="form-input-wide">
+                        <div class="form-header-group">
+                            <h2 class="form-header">
+                                Front Page Post
+                            </h2>
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="newposttitle"> Title </label>
+                        <div class="form-input">
+                            <input type="text" class="form-textbox" id="newposttitle" size="80" maxlength="50" />
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="newpostcontent"> Content </label>
+                        <div class="form-input">
+                            <textarea id="newpostcontent" class="form-textarea" cols="75" rows="25"></textarea>
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="file"> Type </label>
+                        <div class="form-input">
+                            <select id="newposttype">
+                                <option value="article">Article</option>
+                                <option value="feature">Feature</option>
+                                <option value="video">Video</option>
+                                <option value="album">Album</option>
+                            </select>
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="file"> YouTube link </label>
+                        <div class="form-input">
+                            <input type="text" class=" form-textbox" id="newpostlink" size="80" />
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="file"> Image </label>
+                        <div class="form-input">
+                            <input class="form-upload" type="file" id="file" file-accept="pdf, doc, docx, xls, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" file-maxsize="10240" />
+                            <span style="font-size: 12px">Article [150x150] - Feature [690x250]</span>
+                        </div>
+
+                    </li>
+                    <li class="form-line">
+                        <div class="form-input-wide">
+                            <div style="margin-left:156px" class="form-buttons-wrapper">
+                                <button type="submit" class="form-submit-button">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li style="display:none">
+                        Should be Empty:
+                        <input type="text" name="website" value="" />
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+        <script type="text/javascript">
+            $("#postform").submit(function(){
+            var messageObj = { title: document.getElementById('newposttitle').value, content:  document.getElementById('newpostcontent').value,
+            type: document.getElementById('newposttype').value, link: document.getElementById('newpostlink').value }
+
+            $.ajax({
+            url: "/immunity/addblog/",
+            type: "POST",
+            data: JSON.stringify(messageObj),
+            cache: false,
+            success: function(response, status, obj){
+            if(obj.status == "OK" || obj.status == 200) {
+            alert("YAY")
+            }
+            },
+            error: function(obj) {
+            if(obj.status == "OK" || obj.status == 200) {
+            }
+            }
+            });
+
+            function printDate(i) {
+            var temp = new Date(i);
+            var dateStr = padStr(temp.getDate() + ".") +
+            padStr(1 + temp.getMonth()+ ".") +
+            padStr(temp.getFullYear());
+
+            return dateStr
+            }
+
+            function padStr(i) {
+            return (i < 10) ? "0" + i : "" + i;
+            }
+
+            function LoadPostsToPage(posts) {
+
+            }
+            })
+
+        </script>
+
+    </div> <!-- /content -->
+
+</div> <!-- /wrapper -->
+
+
+</body>
+</html>

@@ -1,58 +1,58 @@
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <title>Team Immunity</title>
-        
-    <link href="./css/main.css" rel="stylesheet">
-      <script src="./js/jquery-1.7.2.min.js"></script>
-       
 
-	
-  </head>
+    <link href="./css/main.css" rel="stylesheet">
+    <script src="./js/jquery-1.7.2.min.js"></script>
+
+
+
+</head>
 
 <body>
-	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
 <div id="wrapper">
-	
-	<div id="header">
-		<div style="widht: 100%; background-color: #1b1b1b; height: 6px"> </div>
-		<div id="nav">  <!-- nav --> 
-			<div style="float: left;">
-				<ul>
-				<li><a href="./news.html">News</a></li>
-				<li><a href="./media.html">Media</a></li>
-				<li><a href="./sponsors.html">Sponsors</a></li>
-				<li><a href="./about.html">About Us</a></li>
-				<li><a href="./contact.html">Contact</a></li>
-				<ul>
-			</div>
-			<div style="float: right;">
-				<a href="./media.html">profile</a>
-				<a href="./media.html">logout</a>
-				<a href="./sponsors.html"><img src="./img/social_fb.png"></a>
-				<a href="./about.html"><img src="./img/social_youtube.png" style="margin: 0 3px 0 0;"></a>
-				<a href="./contact.html"><img src="./img/social_twitter.png"></a>
-			</div>
-		</div>
-		<div id="logos" >
-			<img class="logos" src="./img/logo_intel.png">
-			<img class="logosiM" src="./img/logo_immunity.png">
-			<img class="logos" src="./img/logo_redbull.png">
-		</div>
-	</div> <!-- /header -->	
-	
-	<div id="ticker" style=" background: url(./img/ticker_cod.png) no-repeat center; height: 260px; max-width: 100%;" >	</div> <!-- /ticker -->	
-	
-	
-	
-	<div id="content"  >
-		<div id="sponsors" style="width: 100%">
-			<div style="width: 100%;background: url(./img/sponsors_top.png) no-repeat 0 0; height: 30px; background-position:center;"> <!-- top --> </div>
-			<div style="width: 100%;background: url(./img/sponsors_hori.png) no-repeat 0 0; height: 50px; background-position:center;"><!-- sponsors --> </div>
-			<div style="width: 100%;background: url(./img/sponsors_bottom.png) no-repeat 0 0; height: 30px; background-position:center;"> <!-- bottom --> </div>
-		</div>
-		<div>
-			<div id="blog">
+
+    <div id="header">
+        <div style="width: 100%; background-color: #1b1b1b; height: 6px"> </div>
+        <div id="nav">  <!-- nav -->
+            <div style="float: left;">
+                <ul>
+                    <li><a class="nav" href="./news.html">News</a></li>
+                    <li><a class="nav" href="./media.html">Media</a></li>
+                    <li><a class="nav" href="./sponsors.html">Sponsors</a></li>
+                    <li><a class="nav" href="./about.html">About Us</a></li>
+                    <li><a class="nav" href="./contact.html">Contact</a></li>
+                    <li><a class="nav" href="./cp.html">Admin</a></li>
+                    <ul>
+            </div>
+            <div style="float: right;">
+                <a href="./media.html">profile</a>
+                <a href="./media.html">logout</a>
+                <a href="./sponsors.html"><img src="./img/social_fb.png"></a>
+                <a href="./about.html"><img src="./img/social_youtube.png" style="margin: 0 3px 0 0; padding:0 7px;"></a>
+                <a href="./contact.html"><img src="./img/social_twitter.png"></a>
+            </div>
+        </div>
+        <div id="logos" >
+            <img class="logos" src="./img/logo_intel.png">
+            <a class="nav" href="./index.html"><img class="logosiM" src="./img/logo_immunity.png"></a>
+            <img class="logos" src="./img/logo_redbull.png">
+        </div>
+    </div> <!-- /header -->
+
+    <div id="ticker" style=" background: url(./img/ticker_cod.png) no-repeat center; height: 260px; max-width: 100%;" >	</div> <!-- /ticker -->
+
+
+
+    <div id="content"  >
+        <div id="sponsors" style="width: 100%">
+            <div style="width: 100%;background: url(./img/sponsors_top.png) no-repeat 0 0; height: 30px; background-position:center;"> <!-- top --> </div>
+            <div style="width: 100%;background: url(./img/sponsors_hori.png) no-repeat 0 0; height: 50px; background-position:center;"><!-- sponsors --> </div>
+            <div style="width: 100%;background: url(./img/sponsors_bottom.png) no-repeat 0 0; height: 30px; background-position:center;"> <!-- bottom --> </div>
+        </div>
+        <div>
+            <div id="blog">
 
                 <script type="text/javascript">
                     $.ajax({
@@ -94,14 +94,17 @@
 
                     function LoadPostsToPage(posts) {
                     var content = document.getElementById("blog");
+
+                    console.log(posts[0].title)
                     for(var i = 0; i<3; i++) {
                     if(posts[i]) {
                     var blog = $("<div class='blog'></div>")
-                    var title = $("<div class='posttitle'>" + posts[i].title + "</div>")
+
+                    var title = $("<div class='posttitle'><a href=./article.html?id=" + posts[i].id + ">" + posts[i].title + "</a></div>")
                     var date = printDate(posts[i].timestamp);
-                    var footer = $("<div class='postfooter'>" + date.substr(0,10) + "</div>");
+                    var footer = $("<div class='postfooter'><div class='comment_date'><img src='./img/icon_date.png' />" + date.substr(0,10) + "</div><div class='comment_link'><img src='./img/icon_comment.png' /><a href='#comment'>Comment</a></div><div class='comment_link'><img src='./img/icon_admin.png' /><a href='#'>Admin</a></div></div>");
                     if(posts[i].type=="article") {
-                    var post = $("<div class='postcontent'><img align='left' style='margin: 3px 10px 5px 0;' src='./img/lina.png' />" + posts[i].content + "</div>");
+                    var post = $("<div class='postcontent' style='min-height: 180;'><img align='left' style='margin: 3px 10px 5px 0;' src='./img/lina.png' />" + posts[i].content + "</div>");
                     $(blog).append(title);
                     }
                     if(posts[i].type=="feature") {
@@ -127,110 +130,78 @@
                     content.appendChild(blog[0]);
                     }
                     }
-
                     }
 
-
                 </script>
-			</div>
+            </div>
 
 
-			<div id="rightnav">				
-				<div id="divisions" class="rightnav">
-					<div style="padding: 5px 0;"> Divisions </div>
-                    <div class="img"><a class="csgoimg" href="divisions.html?csgo"></a></div>
-					<div class="img"><a class="bf3img" href="divisions.html?bf3"></a></div>
-					<div class="img"><a class="lolimg" href="divisions.html?lol"></a></div>
-					<div class="img"><a class="haloimg" href="divisions.html?halo"></a></div>
-					<div class="img"><a class="fifaimg" href="divisions.html?fifa"></a></div>
-					<div class="img"><a class="sc2img" href="divisions.html?sc2"></a></div>
-					<div class="img"><a class="tf2img" href="divisions.html?tf2"></a></div>
-                    <div class="img"><a class="codimg" href="divisions.html?cod"></a></div>
-					<div style="height: 3px;" class="rightnav"> <!-- spacer --> </div>
-				</div>
-				
-				<div id="twitter" class="rightnavtop">
-					<div>
-	<script>
-	new TWTR.Widget({
-	  version: 2,
-	  type: 'search',
-	  search: '@teamimmunity',
-	  interval: 10,
-	  subject: 'Team Immunity related tweets',
-	  width: 280,
-	  height: 300,
-	  theme: {
-		shell: {
-		  background: 'transparent',
-		  color: '#fff'
-		},
-		tweets: {
-		  background: 'transparent',
-		  color: '#fff',
-		  links: '#42c9ff'
-		}
-	  },
-	  features: {
-		scrollbar: false,
-		loop: true,
-		live: true,
-		hashtags: true,
-		timestamp: true,
-		avatars: true,
-		toptweets: true,
-		behavior: 'default'
-	  }
-	}).render().start();
-	</script>
+            <div id="rightnav">
+                <div id="divisions" class="rightnav">
+                    <div style="padding: 5px 0;"> Divisions </div>
+                    <div class="img"><a class="csgoimg" href="divisions.html?name=csgo"></a></div>
+                    <div class="img"><a class="bf3img" href="divisions.html?name=bf3"></a></div>
+                    <div class="img"><a class="lolimg" href="divisions.html?name=lol"></a></div>
+                    <div class="img"><a class="haloimg" href="divisions.html?name=halo"></a></div>
+                    <div class="img"><a class="fifaimg" href="divisions.html?name=fifa"></a></div>
+                    <div class="img"><a class="sc2img" href="divisions.html?name=sc2"></a></div>
+                    <div class="img"><a class="tf2img" href="divisions.html?name=tf2"></a></div>
+                    <div class="img"><a class="codimg" href="divisions.html?name=cod"></a></div>
+                    <div style="height: 3px;" class="rightnav"> <!-- spacer --> </div>
+                </div>
+
+                <div id="twitter" class="rightnavtop">
+                    <div>
+                        <a class="twitter-timeline" href="https://twitter.com/search?q=%40teamimmunity" data-widget-id="309908843410882560">Tweets about "@teamimmunity"</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- /content -->
 
 
-					</div>
-				</div>
-			</div>
-		</div>
-		
-	</div> <!-- /content -->
-	
-	
-	
-	
-	<div id="footer">
-		<div id="info">
-			<div id="footersponsors">
-				<div class="footertitle">Sponsors</div>
-				<ul>
-					<li><a href="http://www.intel.com.au">Intel Australia</a></li>
-					<li><a href="http://www.redbull.com.au">Red Bull Australia</a></li>
-					<li><a href="http://www.steelseries.com">SteelSeries Professional Gaming Gear</a></li>
-					<li><a href="http://www.benq.com.au">BenQ Australia</a></li>
-					<li><a href="http://www.gigabyte.com.au">GIGABYTE Technology</a></li>
-					<li><a href="http://www.antec.com">Antec Australia</a></li>
-					<li><a href="http://www.geil.com.tw">GeiL Memory</a></li>
-				</ul>
-			</div>
-			<div style="float: left;"> <img src="./img/footer_divider.png" /> </div>
-			<div id="whatis">
-				<div class="footertitle">What is Team Immunity?</div>
 
-				<div class="footercontent">
-				Team Immunity is Australia's premier multi-gaming eSports team. Based in Melbourne Australia and founded in July 2003 - Team Immunity was Australia's first professional multi-gaming team. 
-				Team Immunity currently compete in Counter-Strike: Global Offensive, Team Fortress 2, FIFA 13, Battlefield 3, Call of Duty: Black Ops 2, Halo & League of Legends.</div>
-			</div>
-			<div style="float: left;"><img src="./img/footer_divider.png" /></div>
-			<div id="social">
-				<div class="footertitle">Social Media</div>
-				<ul>
-					<li><a href="http://www.facebook.com/TeamImmunity">Official Team Immunity Facebook</a></li>
-					<li><a href="http://www.twitter.com.au/TeamImmunnity">Team Immunity Twitter</a></li>
-					<li><a href="http://www.youtube.com/teamimmunnityintel">Team Immunity YouTube Channel</a></li>
-				</ul>
-			</div>
-		</div>
-		<div id="copyright">
-			© Copyright 2013 Team Immunity. All Rights Reservered. Temporary Website
-		</div>
-	</div>
+
+    <div id="footer">
+
+        <div id="info">
+            <div id="footersponsors">
+                <div class="footertitle">Sponsors</div>
+                <ul>
+                    <li><a href="http://www.intel.com.au">Intel Australia</a></li>
+                    <li><a href="http://www.redbull.com.au">Red Bull Australia</a></li>
+                    <li><a href="http://www.steelseries.com">SteelSeries Professional Gaming Gear</a></li>
+                    <li><a href="http://www.benq.com.au">BenQ Australia</a></li>
+                    <li><a href="http://www.gigabyte.com.au">GIGABYTE Technology</a></li>
+                    <li><a href="http://www.antec.com">Antec Australia</a></li>
+                    <li><a href="http://www.geil.com.tw">GeiL Memory</a></li>
+                </ul>
+            </div>
+            <div style="float: left;"> <img src="./img/footer_divider.png" /> </div>
+            <div id="whatis">
+                <div class="footertitle">What is Team Immunity?</div>
+
+                <div class="footercontent">
+                    Team Immunity is Australia's premier multi-gaming eSports team. Based in Melbourne Australia and founded in July 2003 - Team Immunity was Australia's first professional multi-gaming team.
+                    Team Immunity currently compete in Counter-Strike: Global Offensive, Team Fortress 2, FIFA 13, Battlefield 3, Call of Duty: Black Ops 2, Halo & League of Legends.</div>
+            </div>
+            <div style="float: left;"><img src="./img/footer_divider.png" /></div>
+            <div id="social">
+                <div class="footertitle">Social Media</div>
+                <ul>
+                    <li><a href="http://www.facebook.com/TeamImmunity">Official Team Immunity Facebook</a></li>
+                    <li><a href="http://www.twitter.com.au/TeamImmunnity">Team Immunity Twitter</a></li>
+                    <li><a href="http://www.youtube.com/teamimmunnityintel">Team Immunity YouTube Channel</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="copyright">
+            © Copyright 2013 Team Immunity. All Rights Reservered. Temporary Website
+        </div>
+    </div>
 </div> <!-- /wrapper -->
 
 

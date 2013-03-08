@@ -1,0 +1,2 @@
+/*C2*/SET SCHEMA PUBLIC
+CREATE TABLE blog (title varchar(250), content varchar(1024), type varchar(50), link varchar(250), timestamp BIGINT )
