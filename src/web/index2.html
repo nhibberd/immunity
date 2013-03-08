@@ -4,14 +4,14 @@
     <title>Team Immunity</title>
         
     <link href="./css/main.css" rel="stylesheet">
-      <script src="./js/jquery-1.7.2.min.js"></script>
+
+	<script src="./js/jquery-1.7.2.min.js"></script>
        
 
 	
   </head>
 
 <body>
-	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
 <div id="wrapper">
 	
 	<div id="header">
@@ -30,7 +30,7 @@
 				<a href="./media.html">profile</a>
 				<a href="./media.html">logout</a>
 				<a href="./sponsors.html"><img src="./img/social_fb.png"></a>
-				<a href="./about.html"><img src="./img/social_youtube.png" style="margin: 0 3px 0 0;"></a>
+				<a href="./about.html"><img src="./img/social_youtube.png"></a>
 				<a href="./contact.html"><img src="./img/social_twitter.png"></a>
 			</div>
 		</div>
@@ -41,7 +41,7 @@
 		</div>
 	</div> <!-- /header -->	
 	
-	<div id="ticker" style=" background: url(./img/ticker_cod.png) no-repeat center; height: 260px; max-width: 100%;" >	</div> <!-- /ticker -->	
+	<div id="ticker" style=" background: url(./img/ticker_cs.png) no-repeat center; height: 260px; max-width: 100%;" >	</div> <!-- /ticker -->	
 	
 	
 	
@@ -94,37 +94,38 @@
 
                     function LoadPostsToPage(posts) {
                     var content = document.getElementById("blog");
+                    console.log("asd")
                     for(var i = 0; i<3; i++) {
                     if(posts[i]) {
-                    var blog = $("<div class='blog'></div>")
-                    var title = $("<div class='posttitle'>" + posts[i].title + "</div>")
-                    var date = printDate(posts[i].timestamp);
-                    var footer = $("<div class='postfooter'>" + date.substr(0,10) + "</div>");
-                    if(posts[i].type=="article") {
-                    var post = $("<div class='postcontent'><img align='left' style='margin: 3px 10px 5px 0;' src='./img/lina.png' />" + posts[i].content + "</div>");
-                    $(blog).append(title);
-                    }
-                    if(posts[i].type=="feature") {
-                    var post = $("<div class='postcontent'><img align='top' style='margin: 3px 0px 5px 0;' src='./img/gigabyte.png' /></div>");
-                    }
-                    if(posts[i].type=="video") {
-                    var post = $("<div class='postcontent'><iframe width='640' height='360' src=" + posts[i].link + " frameborder='0' allowfullscreen></div>");
-                    }
+                        var blog = $("<div class='blog'></div>")
+                        var title = $("<div class='posttitle'>" + posts[i].title + "</div>")
+                        var date = printDate(posts[i].timestamp);
+                        var footer = $("<div class='postfooter'>" + date.substr(0,10) + "</div>");
+                        if(posts[i].type=="A") {
+                            var post = $("<div class='postcontent'><img align='left' style='margin: 3px 10px 5px 0;' src='./img/lina.png' />" + posts[i].content + "</div>");
+                            $(blog).append(title);
+                        }
+                        if(posts[i].type=="B") {
+                            var post = $("<div class='postcontent'><img align='top' style='margin: 3px 0px 5px 0;' src='./img/gigabyte.png' /></div>");
+                        }
+                        if(posts[i].type=="C") {
+                            var post = $("<div class='postcontent'><iframe width='640' height='360' src='http://www.youtube.com/embed/DQYPnsKWAvI??html5=1' frameborder='0' allowfullscreen></div>");
+                        }
 
-                    $(blog).append(post)
+                        $(blog).append(post)
 
-                    if(posts[i].type=="feature") {
-                    $(blog).append(title);
-                    var post2 = $("<div class='postcontent'>" + posts[i].content + "</div>");
-                    $(blog).append(post2);
-                    }
-                    if(posts[i].type=="video") {
-                    $(blog).append(title);
-                    var post2 = $("<div class='postcontent'>" + posts[i].content + "</div>");
-                    $(blog).append(post2);
-                    }
-                    $(blog).append(footer);
-                    content.appendChild(blog[0]);
+                        if(posts[i].type=="B") {
+                            $(blog).append(title);
+                            var post2 = $("<div class='postcontent'>" + posts[i].content + "</div>");
+                            $(blog).append(post2);
+                        }
+                        if(posts[i].type=="C") {
+                            $(blog).append(title);
+                            var post2 = $("<div class='postcontent'>" + posts[i].content + "</div>");
+                            $(blog).append(post2);
+                        }
+                        $(blog).append(footer);
+                        content.appendChild(blog[0]);
                     }
                     }
 
@@ -137,55 +138,23 @@
 
 			<div id="rightnav">				
 				<div id="divisions" class="rightnav">
-					<div style="padding: 5px 0;"> Divisions </div>
-                    <div class="img"><a class="csgoimg" href="divisions.html?csgo"></a></div>
-					<div class="img"><a class="bf3img" href="divisions.html?bf3"></a></div>
-					<div class="img"><a class="lolimg" href="divisions.html?lol"></a></div>
-					<div class="img"><a class="haloimg" href="divisions.html?halo"></a></div>
-					<div class="img"><a class="fifaimg" href="divisions.html?fifa"></a></div>
-					<div class="img"><a class="sc2img" href="divisions.html?sc2"></a></div>
-					<div class="img"><a class="tf2img" href="divisions.html?tf2"></a></div>
-                    <div class="img"><a class="codimg" href="divisions.html?cod"></a></div>
+					<div style="height: 25px; padding: 5px 0;"> Divisions </div>
+					<img src="./img/div_csgo.png">
+					<img src="./img/div_bf3.png">
+					<img src="./img/div_lol.png">
+					<img src="./img/div_halo.png">
+					<img src="./img/div_fifa.png">
+					<img src="./img/div_sc2.png">
+					<img src="./img/div_tf2.png">
 					<div style="height: 3px;" class="rightnav"> <!-- spacer --> </div>
 				</div>
 				
+				<div id="facebook" class="rightnavtop">
+					<div style="height: 25px; padding: 5px 0;"> facebook </div>
+				</div>
+				
 				<div id="twitter" class="rightnavtop">
-					<div>
-	<script>
-	new TWTR.Widget({
-	  version: 2,
-	  type: 'search',
-	  search: '@teamimmunity',
-	  interval: 10,
-	  subject: 'Team Immunity related tweets',
-	  width: 280,
-	  height: 300,
-	  theme: {
-		shell: {
-		  background: 'transparent',
-		  color: '#fff'
-		},
-		tweets: {
-		  background: 'transparent',
-		  color: '#fff',
-		  links: '#42c9ff'
-		}
-	  },
-	  features: {
-		scrollbar: false,
-		loop: true,
-		live: true,
-		hashtags: true,
-		timestamp: true,
-		avatars: true,
-		toptweets: true,
-		behavior: 'default'
-	  }
-	}).render().start();
-	</script>
-
-
-					</div>
+					<div style="height: 25px; padding: 5px 0;"> twiiter </div>
 				</div>
 			</div>
 		</div>
@@ -197,8 +166,8 @@
 	
 	<div id="footer">
 		<div id="info">
-			<div id="footersponsors">
-				<div class="footertitle">Sponsors</div>
+			<div id="sponsors">
+				<div class="footertitle">Sponsor</div>
 				<ul>
 					<li><a href="http://www.intel.com.au">Intel Australia</a></li>
 					<li><a href="http://www.redbull.com.au">Red Bull Australia</a></li>
@@ -211,24 +180,23 @@
 			</div>
 			<div style="float: left;"> <img src="./img/footer_divider.png" /> </div>
 			<div id="whatis">
-				<div class="footertitle">What is Team Immunity?</div>
+				<div class="footertitle">What iss</div>
 
 				<div class="footercontent">
-				Team Immunity is Australia's premier multi-gaming eSports team. Based in Melbourne Australia and founded in July 2003 - Team Immunity was Australia's first professional multi-gaming team. 
-				Team Immunity currently compete in Counter-Strike: Global Offensive, Team Fortress 2, FIFA 13, Battlefield 3, Call of Duty: Black Ops 2, Halo & League of Legends.</div>
+				am est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam ni</div>
 			</div>
 			<div style="float: left;"><img src="./img/footer_divider.png" /></div>
 			<div id="social">
 				<div class="footertitle">Social Media</div>
 				<ul>
-					<li><a href="http://www.facebook.com/TeamImmunity">Official Team Immunity Facebook</a></li>
+					<li><a href="http://www.facebook.com/TeamImmunity">Offical Team Immunity Facebook</a></li>
 					<li><a href="http://www.twitter.com.au/TeamImmunnity">Team Immunity Twitter</a></li>
 					<li><a href="http://www.youtube.com/teamimmunnityintel">Team Immunity YouTube Channel</a></li>
 				</ul>
 			</div>
 		</div>
 		<div id="copyright">
-			© Copyright 2013 Team Immunity. All Rights Reservered. Temporary Website
+			© Copyright 2013 Team Immunity. All Rights Reservered. Website
 		</div>
 	</div>
 </div> <!-- /wrapper -->

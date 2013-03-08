@@ -1,4 +1,4 @@
-package main.immunity.tool;
+package immunity.tool;
 
 import java.util.Date;
 

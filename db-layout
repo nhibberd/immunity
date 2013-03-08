@@ -1,0 +1,20 @@
+-- users
+auto id
+string username
+string email
+string password
+string salt
+boolean admin
+boolean content
+boolean moderator
+
+-- blog
+id
+title
+content
+author
+
+-- profile
+id
+firstname
+lastname

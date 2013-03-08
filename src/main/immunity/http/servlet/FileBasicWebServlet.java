@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URLDecoder;
 
-public class FileBasicWebServlet extends HttpServlet {
+public class    FileBasicWebServlet extends HttpServlet {
     // Constants ----------------------------------------------------------------------------------
     private static final int DEFAULT_BUFFER_SIZE = 10240; // 10KB.
 
