@@ -5,6 +5,10 @@
 
     <link href="./css/main.css" rel="stylesheet">
       <script src="./js/jquery-1.7.2.min.js"></script>
+      <script src="./js/stuff.js"></script>
+      <script src="./js/json2.js"></script>
+      <script src="./js/focus.js"></script>
+      <script src="./js/DialogManager.js"></script>
 
 
 
@@ -25,14 +29,60 @@
 
 
 	<div id="content"  >
-		<div id="sponsors" style="width: 100%">
-			<div style="width: 100%;background: url(./img/sponsors_top.png) no-repeat 0 0; height: 30px; background-position:center;"> <!-- top --> </div>
-			<div style="width: 100%;background: url(./img/sponsors_hori.png) no-repeat 0 0; height: 50px; background-position:center;"><!-- sponsors --> </div>
-			<div style="width: 100%;background: url(./img/sponsors_bottom.png) no-repeat 0 0; height: 30px; background-position:center;"> <!-- bottom --> </div>
+        <div id="outersponsor">
+            <script type="text/javascript">
+                $('#outersponsor').load('./index.html #sponsors');
+            </script>
 		</div>
         <div>
             <div id="article">
+                <div id="article_inner">
+
+                    <!--
+
+
+                    var query = window.location.search.substring(1);
+                    var pair = query.split("=");
+                    var id = pair[1];
+                    document.postcomment.action= action="./article.html?id=" + id
+                    -->
+
+                </div>
+                <textarea id="hidden_counter" style="display:none;"></textarea>
+                <div class="write_comment">
+                    <div class="comment_title">Write a comment below:</div>
+
+                    <form id="postcomment" action="./article.html" method="get">
+                        <div id="hidden_post_comment"></div>
+
+                        <input type="hidden" name="id" value="1" />
+
+                        <script type="text/javascript">
+
+                            var content = document.getElementById("article_inner");
+
+
+                            var query = window.location.search.substring(1);
+                            var pair = query.split("=");
+                            var id = pair[1];
+
+                            function writeComment() {
+                            var content = document.getElementById("hidden_post_comment");
+
+                            var x = $("<input type='hidden' name='id' value='" + id + "' />")
+                            content.appendChild(x[0]);
+                            }
+
+
+                        </script>
+
+
+                        <div  class="text"><div class="form-input"><textarea id='comment_box' class='form-textarea'></textarea> </div> </div>
+                        <div class='buttons_bar'> <div style='margin-left:156px' class='form-buttons-wrapper'> <button id='comment_submit' type='submit' class='form-submit-button'>post comment</button> </div> </div>
+                    </form>
+                </div>
                 <script type="text/javascript">
+
                     var query = window.location.search.substring(1);
                     var pair = query.split("=");
                     var id = pair[1];
@@ -87,7 +137,7 @@
                     }
 
                     function print(blog) {
-                    var content = document.getElementById("article");
+                    var content = document.getElementById("article_inner");
 
 
                     var asd = $("<div class='blog'></div>")
@@ -130,48 +180,61 @@
                     if(blog.blog.type!="error") { $(asd).append(footer); }
                     content.appendChild(asd[0]);
 
-                    writeComment()
+
                     printComments(blog.comments)
                     }
 
                     function printComments(comments) {
-                        var content = document.getElementById("article");
-                        for(var i = 0; i<comments.length; i++) {
-                            if(comments[i]) {
-
-
-                                var x = $("<div class='comment' style='min-height: 50px'></div>")
-                                var avatar = $("<div class='comment_avatar'><img src='./img/avatar.png' /></div>")
-                                var says = $("<div><div class='comment_name'>name</div><div class='comment_postdate'>date | #1 </div></div>")
-
-
-                                var post = $("<div class='comment_content'>" + comments[i].content + "</div>")
-                                $(x).append(avatar);
-                                $(x).append(says);
-                                $(x).append(post);
-                                content.appendChild(x[0]);
-                            }
-                        }
-                    }
-
-                    function writeComment() {
                     var content = document.getElementById("article");
-                    var x = $("<div class='write_comment'></div>")
-                    var title = $("<div class='comment_title'>Write a comment below:</div>")
-                    var text = $("<div class='text'><div class='form-input'><textarea id='comment_box' class='form-textarea'></textarea> </div> </div>")
-                    var buttons = $("<div class='buttons_bar'> <div style='margin-left:156px' class='form-buttons-wrapper'> <button id='comment_submit' type='submit' class='form-submit-button'>post comment</button> </div> </div>")
-                    $(x).append(title);
-                    $(x).append(text);
-                    $(x).append(buttons);
+                    for(var i = 0; i<comments.length; i++) {
+                    document.getElementById("hidden_counter").value = comments.length;
+                    if(comments[i]) {
+
+
+                    var x = $("<div class='comment' style='min-height: 50px'></div>")
+                    var avatar = $("<div class='comment_avatar'><img src='./img/avatar.png' /></div>")
+                    var date = new Date(comments[i].timestamp)
+                    var says = $("<div><div class='comment_name'>name</div><div class='comment_postdate'>" + dateFormat(date, 'mmm dd yyyy HH:MM') + " | #" + comments[i].postid + "</div></div>")
+
+
+                    var post = $("<div class='comment_content'>" + comments[i].content + "</div>")
+                    $(x).append(avatar);
+                    $(x).append(says);
+                    $(x).append(post);
                     content.appendChild(x[0]);
-
-
-
-
                     }
+                    }
+                    }
+
+                    $("#postcomment").submit(function(){ var messageObj = { blogid: id, postid: parseInt(document.getElementById("hidden_counter").value) + 1, authorid: 0, content: document.getElementById("comment_box").value, timestamp: 0 }
+
+
+                    $.ajax({
+                    url: "/immunity/addcomment/",
+                    type: "POST",
+                    data: JSON.stringify(messageObj),
+                    cache: false,
+                    success: function(response, status, obj){
+                    if(obj.status == "OK" || obj.status == 200) {
+                    console.log("ASD")
+                    }
+                    },
+                    error: function(obj) {
+                    if(obj.status == "OK" || obj.status == 200) {
+                    console.log("ASD")
+                    }
+                    if(obj.status == 404) {
+                    console.log("error")
+                    }
+                    }
+                    });
+                    })
+
+
 
 
                 </script>
+
             </div>
 
 

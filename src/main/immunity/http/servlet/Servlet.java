@@ -4,6 +4,7 @@ package immunity.http.servlet;
 import immunity.data.Division;
 import immunity.data.Player;
 import immunity.data.RDivision;
+import immunity.data.Sponsor;
 import immunity.data.basic.StringHolder;
 import immunity.data.blog.Article;
 import immunity.data.blog.Comments;
@@ -29,7 +30,8 @@ import java.util.List;
 public class Servlet extends HttpServlet {
     private static final Connector connector =  new Connector("jdbc:postgresql://localhost/immunity", "immunity", "pussytown");
     final String blog="/getblog/", addblog="/addblog/", article="/getarticle/", acomment="/addcomment/",
-        gcomment="/getcomment/", gdivision="/getdivision/", aplayer="/addplayer/", adivision="/adddivision/";
+        gcomment="/getcomment/", gdivision="/getdivision/", aplayer="/addplayer/", adivision="/adddivision/",
+        asponsor="/addsponsor/", gsponsor="/getsponsors/";
 
 
     private <B>ReturnMarshaller<B> b(ResultFunction<Connection, B> service) {
@@ -54,11 +56,13 @@ public class Servlet extends HttpServlet {
     private ActionMarshaller<Division> adddivision = actionMarshaller(Division.class, new AddDivision());
     private ActionMarshaller<Player> addplayer = actionMarshaller(Player.class, new AddPlayer());
 
+    private ActionMarshaller<Sponsor> addsponsor = actionMarshaller(Sponsor.class, new AddSponsor());
+    private ReturnMarshaller<List<Sponsor>> getsponsor = b(new GetSponsor());
+
 
 
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        
-        resp.getWriter();
+
         if (request(req, blog))
             getblog.marshal(resp);
         if (request(req, addblog))
@@ -75,6 +79,10 @@ public class Servlet extends HttpServlet {
            adddivision.marshal(req, resp);
        if (request(req, aplayer))
            addplayer.marshal(req, resp);
+       if (request(req, asponsor))
+           addsponsor.marshal(req, resp);
+       if (request(req, gsponsor))
+           getsponsor.marshal(resp);
 
     }
 

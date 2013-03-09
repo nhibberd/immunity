@@ -7,10 +7,10 @@ import java.util.List;
 
 public class RDivision {
     public List<Player> players;
-    public String info;
+    public Division division;
 
-    public RDivision(List<Player> players, String info) {
+    public RDivision(List<Player> players, Division division) {
         this.players = players;
-        this.info = info;
+        this.division = division;
     }
 }

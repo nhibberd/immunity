@@ -49,6 +49,8 @@
     <div id="content" style="min-height: 100%" >
         <div class="adminbuttons">
             <input id="post" type=button name=type value='Front page post' onclick="setVisibility('frontpost', 'post', 'Front Page Post', 'Cancel Post');";>
+            <input id="division" type=button name=type value='Add Division' onclick="setVisibility('adddivision', 'division', 'Add Division', 'Cancel Add Division');";>
+            <input id="player" type=button name=type value='Add Player' onclick="setVisibility('addplayer', 'player', 'Add Player', 'Cancel Add Player');";>
         </div>
 
         <div id="frontpost" style="display: none;" >
@@ -115,7 +117,157 @@
             </form>
         </div>
 
+        <div id="adddivision" style="display: none;" >
+            <form id="adddivisionform">
+                <ul class="form-section">
+                    <li class="form-input-wide">
+                        <div class="form-header-group">
+                            <h2 class="form-header">
+                                Add Division
+                            </h2>
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="adddivisionname"> Name </label>
+                        <div class="form-input">
+                            <input type="text" class="form-textbox" id="adddivisionname" size="80" maxlength="50" />
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="adddivisioninfo"> Info </label>
+                        <div class="form-input">
+                            <textarea id="adddivisioninfo" class="form-textarea" cols="75" rows="25"></textarea>
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="adddivisionpicture"> Picture </label>
+                        <div class="form-input">
+                            <input type="text" class=" form-textbox" id="adddivisionpicture" size="80" />
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="divisionfile"> Image </label>
+                        <div class="form-input">
+                            <input class="form-upload" type="file" id="divisionfile" file-accept="pdf, doc, docx, xls, csv, txt, rtf, html, zip, mp3, wma, mpg, flv, avi, jpg, jpeg, png, gif" file-maxsize="10240" />
+                            <span style="font-size: 12px">Size [250x200]</span>
+                        </div>
+
+                    </li>
+                    <li class="form-line">
+                        <div class="form-input-wide">
+                            <div style="margin-left:156px" class="form-buttons-wrapper">
+                                <button type="submit" class="form-submit-button">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
+
+        <div id="addplayer" style="display: none;" >
+            <form id="addplayerform">
+                <ul class="form-section">
+                    <li class="form-input-wide">
+                        <div class="form-header-group">
+                            <h2 class="form-header">
+                                Add player
+                            </h2>
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="addplayerid"> ID </label>
+                        <div class="form-input">
+                            <input type="text" class="form-textbox" id="addplayerid" size="80" maxlength="50" />
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="addplayerdivision"> Division </label>
+                        <div class="form-input">
+                            <input type="text" class="form-textbox" id="addplayerdivision" size="80" maxlength="50" />
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="addplayername"> Name </label>
+                        <div class="form-input">
+                            <input type="text" class="form-textbox" id="addplayername" size="80" maxlength="30" />
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="addplayerbio"> Info </label>
+                        <div class="form-input">
+                            <textarea id="addplayerbio" class="form-textarea" cols="75" rows="25"></textarea>
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <label class="form-label-left" for="addplayerpicture"> Picture </label>
+                        <div class="form-input">
+                            <input type="text" class=" form-textbox" id="addplayerpicture" size="80" />
+                        </div>
+                    </li>
+                    <li class="form-line">
+                        <div class="form-input-wide">
+                            <div style="margin-left:156px" class="form-buttons-wrapper">
+                                <button type="submit" class="form-submit-button">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </form>
+        </div>
+
         <script type="text/javascript">
+            $("#adddivision").submit(function(){
+            var messageObj = { name: document.getElementById('adddivisionname').value, info:  document.getElementById('adddivisioninfo').value,
+            picture: document.getElementById('adddivisionpicture').value }
+
+            $.ajax({
+            url: "/immunity/adddivision/",
+            type: "POST",
+            data: JSON.stringify(messageObj),
+            cache: false,
+            success: function(response, status, obj){
+            if(obj.status == "OK" || obj.status == 200) {
+            alert("YAY")
+            }
+            },
+            error: function(obj) {
+            if(obj.status == "OK" || obj.status == 200) {
+            }
+            }
+            });
+            })
+
+
+
+            $("#addplayer").submit(function(){
+            var messageObj = { id: parseInt(document.getElementById('addplayerid').value), division:  parseInt(document.getElementById('addplayerdivision').value),
+            name: document.getElementById('addplayername').value, bio: document.getElementById('addplayerbio').value,
+            picture: document.getElementById('addplayerpicture').value}
+            console.log(messageObj)
+
+            $.ajax({
+            url: "/immunity/addplayer/",
+            type: "POST",
+            data: JSON.stringify(messageObj),
+            cache: false,
+            success: function(response, status, obj){
+            if(obj.status == "OK" || obj.status == 200) {
+            alert("YAY")
+            }
+            },
+            error: function(obj) {
+            if(obj.status == "OK" || obj.status == 200) {
+            }
+            }
+            });
+            })
+
+
             $("#postform").submit(function(){
             var messageObj = { title: document.getElementById('newposttitle').value, content:  document.getElementById('newpostcontent').value,
             type: document.getElementById('newposttype').value, link: document.getElementById('newpostlink').value }
@@ -135,23 +287,6 @@
             }
             }
             });
-
-            function printDate(i) {
-            var temp = new Date(i);
-            var dateStr = padStr(temp.getDate() + ".") +
-            padStr(1 + temp.getMonth()+ ".") +
-            padStr(temp.getFullYear());
-
-            return dateStr
-            }
-
-            function padStr(i) {
-            return (i < 10) ? "0" + i : "" + i;
-            }
-
-            function LoadPostsToPage(posts) {
-
-            }
             })
 
         </script>

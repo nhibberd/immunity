@@ -18,7 +18,7 @@
         <div id="nav">  <!-- nav -->
             <div style="float: left;">
                 <ul>
-                    <li><a class="nav" href="./news.html">News</a></li>
+                    <li><a class="nav" href=".">News</a></li>
                     <li><a class="nav" href="./media.html">Media</a></li>
                     <li><a class="nav" href="./sponsors.html">Sponsors</a></li>
                     <li><a class="nav" href="./about.html">About Us</a></li>
@@ -46,9 +46,9 @@
 
 
     <div id="content"  >
-        <div id="sponsors" style="width: 100%">
+        <div id="sponsors">
             <div style="width: 100%;background: url(./img/sponsors_top.png) no-repeat 0 0; height: 30px; background-position:center;"> <!-- top --> </div>
-            <div style="width: 100%;background: url(./img/sponsors_hori.png) no-repeat 0 0; height: 50px; background-position:center;"><!-- sponsors --> </div>
+            <a href="sponsors.html"><div style="width: 100%;background: url(./img/sponsors_hori.png) no-repeat 0 0; height: 50px; background-position:center;"><!-- sponsors --> </div></a>
             <div style="width: 100%;background: url(./img/sponsors_bottom.png) no-repeat 0 0; height: 30px; background-position:center;"> <!-- bottom --> </div>
         </div>
         <div>
@@ -96,7 +96,7 @@
                     var content = document.getElementById("blog");
 
                     console.log(posts[0].title)
-                    for(var i = 0; i<3; i++) {
+                    for(var i = 0; i<5; i++) {
                     if(posts[i]) {
                     var blog = $("<div class='blog'></div>")
 

@@ -25,22 +25,17 @@
 
 
 	<div id="content"  >
-		<div id="outersponsor">
+        <div id="outersponsor">
             <script type="text/javascript">
                 $('#outersponsor').load('./index.html #sponsors');
             </script>
 		</div>
         <div>
-            <div id="division">
+            <div id="content_sponsors">
                 <script type="text/javascript">
-                    var query = window.location.search.substring(1);
-                    var pair = query.split("=");
-                    var id = pair[1];
-
                     $.ajax({
-                    url: "/immunity/getdivision/",
-                    type: "POST",
-                    data: JSON.stringify({string: id}),
+                    url: "/immunity/getsponsors/",
+                    type: "GET",
                     cache: false,
                     success: function(response, status, obj){
 
@@ -78,37 +73,19 @@
 
 
 
-                    function print(division) {
-                    var content = document.getElementById("division");
-                    var x = $("<div class='gameinfo'></div>")
-                    var picture = $("<div class='game_image'><img src='" + division.division.picture + "' /></div>")
-                    var wrapper = $("<div class='game_content_wrapper'></div>")
-                    var title = $("<div><div class='game_title'> title </div></div>")
-                    var gamecontent = $("<div><div class='game_content'>" + division.division.info + "</div></div>")
-                    $(x).append(picture);
-                    $(wrapper).append(title);
-                    $(wrapper).append(gamecontent);
-                    $(x).append(wrapper);
-                    content.appendChild(x[0]);
-
-
-
-
-
-                    var players = division.players;
-                    console.log(division.players);
-                    console.log(players);
-                    for(var i = 0; i<players.length; i++) {
-                        if(players[i]) {
-                            var x = $("<div class='player'></div>")
-                            var y = $("<div class='player_content'></div>")
-                            var picture = $("<div class='player_picture'><img src='" + players[i].picture + "' /></div>")
-                            var name = $("<div><div class='player_name'>" + players[i].name + "</div></div>")
-                            var bio = $("<div><div class='player_bio'>" + players[i].bio + "</div></div>")
+                    function print(sponsors) {
+                    var content = document.getElementById("content_sponsors");
+                    for(var i = 0; i<sponsors.length; i++) {
+                        if(sponsors[i]) {
+                            var x = $("<div class='sponsor_wrapper'></div>")
+                            var y = $("<div class='sponsor_content'></div>")
+                            var picture = $("<div class='sponsor_picture'><img src='" + sponsors[i].picture + "' /></div>")
+                            var name = $("<div><div class='sponsor_name'>" + sponsors[i].name + "</div></div>")
+                            var info = $("<div><div class='sponsor_info'>" + sponsors[i].info + "</div></div>")
 
                             $(x).append(picture);
                             $(y).append(name);
-                            $(y).append(bio);
+                            $(y).append(info);
                             $(x).append(y);
                             content.appendChild(x[0]);
                         }

@@ -18,12 +18,10 @@ import java.util.List;
 public class GetDivision implements ResultFunction2<Connection,StringHolder,RDivision> {
     private final toro.Db database = new toro.Db();
     public Result<RDivision> apply(Connection connection, StringHolder x) {
-        System.out.println("HELLO");
         Option<Division> division = database.queryObjectFromObjects(connection, "select * from division where name=?", new Division(), x.string);
         if (division.isSome()) {
-            System.out.println("injside");
             List<Player> players = database.queryListObjectFromObjects(connection, "select * from player where division=?", new Player(), division.getOrDie().id);
-            return Result.ok(new RDivision(players, division.getOrDie().info));
+            return Result.ok(new RDivision(players, division.getOrDie()));
         }
         else
             return Result.notfound();

@@ -4,7 +4,7 @@
     <list default="true" id="7cc5999b-3375-4d96-a7c5-3a367c5bf187" name="Default" comment="" />
     <ignored path="immunity.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362766901931" ignored="false" />
+    <file path="/Dummy.txt" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362828684820" ignored="false" />
     <file path="$PROJECT_DIR$/src/main/immunity/data/auth/LoginNugget.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362658948266" ignored="false" />
     <file path="$PROJECT_DIR$/src/main/immunity/data/auth/HasUser.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362658948266" ignored="false" />
     <file path="$PROJECT_DIR$/src/main/immunity/data/grower/Grower.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362658948266" ignored="false" />
@@ -90,12 +90,12 @@
     <file path="$PROJECT_DIR$/src/main/immunity/http/data/rep/Rep.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362658995529" ignored="false" />
     <file path="$PROJECT_DIR$/src/main/immunity/http/data/rep/Contact.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362658995529" ignored="false" />
     <file path="/AuthMarshaller.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362659012673" ignored="false" />
-    <file path="/a.dummy" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362767159751" ignored="false" />
+    <file path="/a.dummy" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362829019688" ignored="false" />
     <file path="/Result.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362659091583" ignored="false" />
-    <file path="/Servlet.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362766511694" ignored="false" />
+    <file path="/Servlet.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362849781590" ignored="false" />
     <file path="/Marshaller.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362659194861" ignored="false" />
     <file path="/Agpro.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362659235531" ignored="false" />
-    <file path="/fragment.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362765632155" ignored="false" />
+    <file path="/fragment.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362817653949" ignored="false" />
     <file path="/index2.html" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362719539005" ignored="false" />
     <file path="/ReturnMarshaller.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362713281481" ignored="false" />
     <file path="/Statement.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362712257276" ignored="false" />
@@ -105,17 +105,17 @@
     <file path="/GetBlog.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362754046179" ignored="false" />
     <file path="/AddBlog.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362724537274" ignored="false" />
     <file path="/admin.html" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362748730472" ignored="false" />
-    <file path="/index.html" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362765544151" ignored="false" />
+    <file path="/index.html" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362826355691" ignored="false" />
     <file path="/Blog.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362753936156" ignored="false" />
-    <file path="/main.css" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362762847421" ignored="false" />
+    <file path="/main.css" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362849136234" ignored="false" />
     <file path="/ActionMarshaller.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362759342261" ignored="false" />
     <file path="/Start.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362727245578" ignored="false" />
-    <file path="/Immunity.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362767093608" ignored="false" />
+    <file path="/Immunity.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362848448216" ignored="false" />
     <file path="/Versions.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362741005279" ignored="false" />
     <file path="/VersionTwo.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362741101334" ignored="false" />
     <file path="/BlogComparartor.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362750690188" ignored="false" />
     <file path="/BlogComparator.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362750984225" ignored="false" />
-    <file path="/article.html" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362766131655" ignored="false" />
+    <file path="/article.html" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362848117874" ignored="false" />
     <file path="/GetArticle.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362759952617" ignored="false" />
     <file path="/dummy.xml" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362753508199" ignored="false" />
     <file path="/db-layout" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362764394074" ignored="false" />
@@ -127,13 +127,22 @@
     <file path="/Article.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362759799491" ignored="false" />
     <file path="/GetDivision.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362766656786" ignored="false" />
     <file path="/Players.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362764540836" ignored="false" />
-    <file path="/AddDivision.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362766782881" ignored="false" />
-    <file path="/AddPlayer.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362764744471" ignored="false" />
-    <file path="/RDivision.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362764853551" ignored="false" />
-    <file path="/Division.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362764966648" ignored="false" />
+    <file path="/AddDivision.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362849770823" ignored="false" />
+    <file path="/AddPlayer.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362848399183" ignored="false" />
+    <file path="/RDivision.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362848783309" ignored="false" />
+    <file path="/Division.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362848609966" ignored="false" />
     <file path="/division.html" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362765707097" ignored="false" />
     <file path="/StringHolder.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362765577917" ignored="false" />
-    <file path="/divisions.html" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362766557579" ignored="false" />
+    <file path="/divisions.html" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362848856076" ignored="false" />
+    <file path="/sponsors.html" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362818810797" ignored="false" />
+    <file path="/Player.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362848382528" ignored="false" />
+    <file path="/Sponsor.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362817530217" ignored="false" />
+    <file path="/GetSponsor.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362817637473" ignored="false" />
+    <file path="/SponsorComparator.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362817625073" ignored="false" />
+    <file path="/AddSponsor.java" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362818075686" ignored="false" />
+    <file path="/*.regexp" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362826835744" ignored="false" />
+    <file path="/cp.html" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362850415828" ignored="false" />
+    <file path="/about.html" changelist="7cc5999b-3375-4d96-a7c5-3a367c5bf187" time="1362849122160" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,28 +204,8 @@
       <file leaf-file-name="VersionOne.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/immunity/data/database/VersionOne.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="52" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0">
+            <state line="13" column="130" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddDivision.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/immunity/service/AddDivision.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="129" selection-start="536" selection-end="536" vertical-scroll-proportion="0.32176656">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Servlet.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/immunity/http/servlet/Servlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="115" selection-start="2731" selection-end="2731" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -224,55 +213,7 @@
       <file leaf-file-name="Immunity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/immunity/http/main/Immunity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="0" selection-start="2332" selection-end="2332" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#1225#2977#0" expanded="true" />
-                <element signature="e#2966#2967#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Comments.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/immunity/data/blog/Comments.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="11" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Blog.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/immunity/data/blog/Blog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="11" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/web/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="958" column="13" selection-start="17120" selection-end="17133" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GetDivision.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/immunity/service/GetDivision.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="103" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="divisions.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/web/divisions.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="46" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0">
+            <state line="59" column="78" selection-start="3106" selection-end="3106" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -281,7 +222,72 @@
       <file leaf-file-name="article.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/web/article.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="159" column="84" selection-start="7083" selection-end="7083" vertical-scroll-proportion="0.0">
+            <state line="208" column="104" selection-start="8697" selection-end="8705" vertical-scroll-proportion="-5.3333335">
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#script#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#5;n#script#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#5;n#script#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#6;n#script#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#10;n#script#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cp.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web/cp.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="97" column="75" selection-start="4845" selection-end="4849" vertical-scroll-proportion="91.80769">
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#li#5;n#ul#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#li#6;n#ul#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#li#7;n#ul#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#div#0;n#li#4;n#ul#0;n#form#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#form#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#li#6;n#ul#0;n#form#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/immunity/data/Player.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="58" selection-start="119" selection-end="245" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/web/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="139" column="92" selection-start="6168" selection-end="6168" vertical-scroll-proportion="-2.0384614">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Servlet.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/immunity/http/servlet/Servlet.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="115" selection-start="3001" selection-end="3001" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddDivision.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/immunity/service/AddDivision.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="61" selection-start="390" selection-end="390" vertical-scroll-proportion="0.18979266">
               <folding />
             </state>
           </provider>
@@ -297,21 +303,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/web/css/main.css" />
-        <option value="$PROJECT_DIR$/db-layout" />
-        <option value="$PROJECT_DIR$/src/main/immunity/data/Players.java" />
-        <option value="$PROJECT_DIR$/src/main/immunity/service/AddPlayer.java" />
-        <option value="$PROJECT_DIR$/src/main/immunity/data/RDivision.java" />
-        <option value="$PROJECT_DIR$/src/main/immunity/data/Division.java" />
-        <option value="$PROJECT_DIR$/src/web/division.html" />
-        <option value="$PROJECT_DIR$/src/main/immunity/data/basic/StringHolder.java" />
-        <option value="$PROJECT_DIR$/src/web/index.html" />
+        <option value="$PROJECT_DIR$/src/web/comment.js" />
         <option value="$PROJECT_DIR$/src/web/article.html" />
-        <option value="$PROJECT_DIR$/src/web/divisions.html" />
-        <option value="$PROJECT_DIR$/src/main/immunity/http/servlet/Servlet.java" />
-        <option value="$PROJECT_DIR$/src/main/immunity/http/main/Immunity.java" />
-        <option value="$PROJECT_DIR$/src/main/immunity/service/GetDivision.java" />
+        <option value="$PROJECT_DIR$/src/main/immunity/data/Player.java" />
+        <option value="$PROJECT_DIR$/src/main/immunity/service/AddPlayer.java" />
         <option value="$PROJECT_DIR$/src/main/immunity/data/database/VersionOne.java" />
+        <option value="$PROJECT_DIR$/src/main/immunity/data/Division.java" />
+        <option value="$PROJECT_DIR$/src/main/immunity/data/RDivision.java" />
+        <option value="$PROJECT_DIR$/src/main/immunity/service/GetDivision.java" />
+        <option value="$PROJECT_DIR$/src/web/divisions.html" />
+        <option value="$PROJECT_DIR$/src/web/index.html" />
+        <option value="$PROJECT_DIR$/src/web/about.html" />
+        <option value="$PROJECT_DIR$/src/web/css/main.css" />
+        <option value="$PROJECT_DIR$/src/main/immunity/http/main/Immunity.java" />
+        <option value="$PROJECT_DIR$/src/web/cp.html" />
+        <option value="$PROJECT_DIR$/src/main/immunity/http/servlet/Servlet.java" />
         <option value="$PROJECT_DIR$/src/main/immunity/service/AddDivision.java" />
       </list>
     </option>
@@ -348,7 +354,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -730,6 +735,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -750,9 +756,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="immunity.data.basic" />
-      <recent name="immunity.data" />
       <recent name="immunity.service" />
+      <recent name="immunity.data" />
+      <recent name="immunity.data.basic" />
       <recent name="immunity.http.marshall" />
       <recent name="immunity.data.database" />
     </key>
@@ -766,6 +772,9 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="immunity.http.servlet" />
       <recent name="immunity.service" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Work\immunity\src\web\js" />
     </key>
   </component>
   <component name="RunManager" selected="Application.GO">
@@ -897,7 +906,6 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -908,10 +916,11 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21824974" sideWeight="0.7260726" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2739274" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21824974" sideWeight="0.7183718" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28162816" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -976,117 +985,134 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/db-layout">
+    <entry file="file://$PROJECT_DIR$/src/main/immunity/http/servlet/FileBasicWebServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="2" selection-start="246" selection-end="246" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/immunity/data/basic/StringHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="17" selection-start="75" selection-end="75" vertical-scroll-proportion="0.057757646">
+        <state line="9" column="16" selection-start="266" selection-end="266" vertical-scroll-proportion="0.10725552">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/index.html">
+    <entry file="file://$PROJECT_DIR$/src/main/immunity/data/RDivision.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="82" selection-start="6306" selection-end="6306" vertical-scroll-proportion="0.0">
+        <state line="11" column="51" selection-start="236" selection-end="236" vertical-scroll-proportion="0.2169059">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/cp.html">
+    <entry file="file://$PROJECT_DIR$/src/main/immunity/service/GetDivision.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="101" column="53" selection-start="4912" selection-end="5203" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="958" column="13" selection-start="17120" selection-end="17133" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/web/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="159" column="84" selection-start="7083" selection-end="7083" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/immunity/service/AddBlog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="102" selection-start="447" selection-end="484" vertical-scroll-proportion="0.17327294">
+        <state line="23" column="71" selection-start="1086" selection-end="1086" vertical-scroll-proportion="0.27113238">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/web/divisions.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="46" selection-start="1462" selection-end="1462" vertical-scroll-proportion="0.0">
+        <state line="80" column="46" selection-start="2425" selection-end="2425" vertical-scroll-proportion="0.30728242">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="282" column="15" selection-start="5021" selection-end="5026" vertical-scroll-proportion="0.6710963">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="27" selection-start="904" selection-end="904" vertical-scroll-proportion="0.664966">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="139" column="92" selection-start="6168" selection-end="6168" vertical-scroll-proportion="-2.0384614">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="208" column="104" selection-start="8697" selection-end="8705" vertical-scroll-proportion="-5.3333335">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#form#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#script#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#script#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#5;n#script#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#6;n#script#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#10;n#script#0;n#div#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/immunity/service/AddPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="80" selection-start="591" selection-end="591" vertical-scroll-proportion="0.2982456">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/web/cp.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="97" column="75" selection-start="4845" selection-end="4849" vertical-scroll-proportion="91.80769">
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#li#5;n#ul#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#6;n#ul#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#li#7;n#ul#0;n#form#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#li#4;n#ul#0;n#form#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#5;n#ul#0;n#form#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#li#6;n#ul#0;n#form#0;n#div#3;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/immunity/http/main/Immunity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="78" selection-start="3106" selection-end="3106" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/immunity/http/servlet/Servlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="115" selection-start="2731" selection-end="2731" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/run/toro_2.9.2-0.1.jar!/toro/Db.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="16" selection-start="254" selection-end="254" vertical-scroll-proportion="0.27914613">
+        <state line="63" column="115" selection-start="3001" selection-end="3001" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/immunity/data/blog/Blog.java">
+    <entry file="file://$PROJECT_DIR$/src/main/immunity/data/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="11" selection-start="312" selection-end="312" vertical-scroll-proportion="0.0">
+        <state line="5" column="58" selection-start="119" selection-end="245" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/immunity/data/blog/Comments.java">
+    <entry file="file://$PROJECT_DIR$/src/main/immunity/data/Division.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="11" selection-start="545" selection-end="545" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/immunity/http/main/Immunity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="0" selection-start="2332" selection-end="2332" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1225#2977#0" expanded="true" />
-            <element signature="e#2966#2967#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/immunity/service/GetDivision.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="103" selection-start="813" selection-end="813" vertical-scroll-proportion="0.0">
+        <state line="13" column="41" selection-start="427" selection-end="427" vertical-scroll-proportion="0.32535884">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/immunity/data/database/VersionOne.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="52" selection-start="487" selection-end="487" vertical-scroll-proportion="0.0">
+        <state line="13" column="130" selection-start="565" selection-end="565" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/immunity/service/AddDivision.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="129" selection-start="536" selection-end="536" vertical-scroll-proportion="0.32176656">
+        <state line="13" column="61" selection-start="390" selection-end="390" vertical-scroll-proportion="0.18979266">
           <folding />
         </state>
       </provider>
