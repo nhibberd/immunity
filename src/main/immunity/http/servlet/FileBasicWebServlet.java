@@ -20,6 +20,8 @@ public class    FileBasicWebServlet extends HttpServlet {
     public void init() throws ServletException {
         // Define base path somehow. You can define it as init-param of the servlet.
         this.filePath = "src/web/";
+        //server
+        //this.filePath = "/home/nick/app/web/";
 
 
         // In a Windows environment with the Applicationserver running on the

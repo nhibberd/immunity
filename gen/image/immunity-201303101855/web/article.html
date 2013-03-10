@@ -1,0 +1,271 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8">
+    <title>Team Immunity</title>
+
+    <link href="./css/main.css" rel="stylesheet">
+      <script src="./js/jquery-1.7.2.min.js"></script>
+      <script src="./js/stuff.js"></script>
+      <script src="./js/json2.js"></script>
+      <script src="./js/focus.js"></script>
+      <script src="./js/DialogManager.js"></script>
+
+
+
+  </head>
+
+<body>
+	<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<div id="wrapper">
+
+	<div id="outerheader">
+        <script type="text/javascript">
+            $('#outerheader').load('./index.html #header');
+        </script>
+	</div> <!-- /header -->
+
+	<div id="ticker" style="background: url(./img/ticker_cod.png) no-repeat center; height: 260px; max-width: 100%;" >	</div> <!-- /ticker -->
+
+
+
+	<div id="content"  >
+        <div id="outersponsor">
+            <script type="text/javascript">
+                $('#outersponsor').load('./index.html #sponsors');
+            </script>
+		</div>
+        <div>
+            <div id="article">
+                <div id="article_inner">
+
+                    <!--
+
+
+                    var query = window.location.search.substring(1);
+                    var pair = query.split("=");
+                    var id = pair[1];
+                    document.postcomment.action= action="./article.html?id=" + id
+                    -->
+
+                </div>
+                <textarea id="hidden_counter" style="display:none;"></textarea>
+                <div class="write_comment">
+                    <div class="comment_title">Write a comment below:</div>
+
+                    <form id="postcomment" action="./article.html" method="get">
+                        <div id="hidden_post_comment"></div>
+
+                        <input type="hidden" name="id" value="1" />
+
+                        <script type="text/javascript">
+
+                            var content = document.getElementById("article_inner");
+
+
+                            var query = window.location.search.substring(1);
+                            var pair = query.split("=");
+                            var id = pair[1];
+
+                            function writeComment() {
+                            var content = document.getElementById("hidden_post_comment");
+
+                            var x = $("<input type='hidden' name='id' value='" + id + "' />")
+                            content.appendChild(x[0]);
+                            }
+
+
+                        </script>
+
+
+                        <div  class="text"><div class="form-input"><textarea id='comment_box' class='form-textarea'></textarea> </div> </div>
+                        <div class='buttons_bar'> <div style='margin-left:156px' class='form-buttons-wrapper'> <button id='comment_submit' type='submit' class='form-submit-button'>post comment</button> </div> </div>
+                    </form>
+                </div>
+                <script type="text/javascript">
+
+                    var query = window.location.search.substring(1);
+                    var pair = query.split("=");
+                    var id = pair[1];
+
+                    $.ajax({
+                    url: "/immunity/getarticle/",
+                    type: "POST",
+                    data: JSON.stringify({integer: id}),
+                    cache: false,
+                    success: function(response, status, obj){
+
+                    if(obj.status == "OK" || obj.status == 200) {
+                    print(response)
+                    }
+                    },
+                    error: function(obj) {
+                    if(obj.status == "OK" || obj.status == 200) {
+                    }
+                    if(obj.status == 500) {
+                    }
+                    if(obj.status == 400) {
+                    }
+                    if(obj.status == 401) {
+                    }
+                    if(obj.status == 404) {
+                    printerror()
+                    }
+                    }
+                    });
+
+                    function printDate(i) {
+                    var temp = new Date(i);
+                    var dateStr = padStr(temp.getDate() + ".") +
+                    padStr(1 + temp.getMonth()+ ".") +
+                    padStr(temp.getFullYear());
+
+                    return dateStr
+                    }
+
+                    function padStr(i) {
+                    return (i < 10) ? "0" + i : "" + i;
+                    }
+
+                    function printerror() {
+                    blog=new Object();
+                    blog.id = 0;
+                    blog.title = "404 - not found"
+                    blog.type = "error"
+                    blog.content = ""
+                    blog.link = ""
+                    print(blog)
+                    }
+
+                    function print(blog) {
+                    var content = document.getElementById("article_inner");
+
+
+                    var asd = $("<div class='blog'></div>")
+
+                    if(blog.blog.id!=0) {
+                    var title = $("<div class='posttitle'><a href=./article.html?id=" + blog.blog.id + ">" + blog.blog.title + "</a></div>")
+                    }
+                    if(blog.blog.id==0) {
+                    var title = $("<div class='posttitle'><a href=./index.html>" + blog.blog.title + "</a></div>")
+                    }
+                    var date = printDate(blog.blog.timestamp);
+                    var footer = $("<div class='postfooter'><div class='comment_date'><img src='./img/icon_date.png' />" + date.substr(0,10) + "</div><div class='comment_link'><img src='./img/icon_comment.png' /><a href='#comment'>Comment</a></div><div class='comment_link'><img src='./img/icon_admin.png' /><a href='#'>Admin</a></div></div>");
+                    if(blog.blog.type=="error") {
+                    var post = $("<div class='postcontent' style='min-height: 180;'>" + blog.blog.content + "</div>");
+                    $(asd).append(title);
+                    }
+                    if(blog.blog.type=="article") {
+                    var post = $("<div class='postcontent' style='min-height: 180;'><img align='left' style='margin: 3px 10px 5px 0;' src='./img/lina.png' />" + blog.blog.content + "</div>");
+                    $(asd).append(title);
+                    }
+                    if(blog.blog.type=="feature") {
+                    var post = $("<div class='postcontent'><img align='top' style='margin: 3px 0px 5px 0;' src='./img/gigabyte.png' /></div>");
+                    }
+                    if(blog.blog.type=="video") {
+                    var post = $("<div class='postcontent'><iframe width='640' height='360' src=" + blog.blog.link + " frameborder='0' allowfullscreen></div>");
+                    }
+
+                    $(asd).append(post)
+
+                    if(blog.blog.type=="feature") {
+                    $(asd).append(title);
+                    var post2 = $("<div class='postcontent'>" + blog.blog.content + "</div>");
+                    $(asd).append(post2);
+                    }
+                    if(blog.blog.type=="video") {
+                    $(asd).append(title);
+                    var post2 = $("<div class='postcontent'>" + blog.blog.content + "</div>");
+                    $(asd).append(post2);
+                    }
+                    if(blog.blog.type!="error") { $(asd).append(footer); }
+                    content.appendChild(asd[0]);
+
+
+                    printComments(blog.comments)
+                    }
+
+                    function printComments(comments) {
+                    var content = document.getElementById("article");
+                    for(var i = 0; i<comments.length; i++) {
+                    document.getElementById("hidden_counter").value = comments.length;
+                    if(comments[i]) {
+
+
+                    var x = $("<div class='comment' style='min-height: 50px'></div>")
+                    var avatar = $("<div class='comment_avatar'><img src='./img/avatar.png' /></div>")
+                    var date = new Date(comments[i].timestamp)
+                    var says = $("<div><div class='comment_name'>name</div><div class='comment_postdate'>" + dateFormat(date, 'mmm dd yyyy HH:MM') + " | #" + comments[i].postid + "</div></div>")
+
+
+                    var post = $("<div class='comment_content'>" + comments[i].content + "</div>")
+                    $(x).append(avatar);
+                    $(x).append(says);
+                    $(x).append(post);
+                    content.appendChild(x[0]);
+                    }
+                    }
+                    }
+
+                    $("#postcomment").submit(function(){ var messageObj = { blogid: id, postid: parseInt(document.getElementById("hidden_counter").value) + 1, authorid: 0, content: document.getElementById("comment_box").value, timestamp: 0 }
+
+
+                    $.ajax({
+                    url: "/immunity/addcomment/",
+                    type: "POST",
+                    data: JSON.stringify(messageObj),
+                    cache: false,
+                    success: function(response, status, obj){
+                    if(obj.status == "OK" || obj.status == 200) {
+                    console.log("ASD")
+                    }
+                    },
+                    error: function(obj) {
+                    if(obj.status == "OK" || obj.status == 200) {
+                    console.log("ASD")
+                    }
+                    if(obj.status == 404) {
+                    console.log("error")
+                    }
+                    }
+                    });
+                    })
+
+
+
+
+                </script>
+
+            </div>
+
+
+            <div id="rightnav">
+                <div id="outerdiv">
+                <script type="text/javascript">
+                    $('#outerdiv').load('./index.html #divisions');
+                </script>
+                </div>
+
+                <div id="twitter" class="rightnavtop">
+                    <div>
+                        <a class="twitter-timeline" href="https://twitter.com/search?q=%40teamimmunity" data-widget-id="309908843410882560">Tweets about "@teamimmunity"</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div> <!-- /content -->
+
+
+
+
+	<div id="outerfooter">
+        <script type="text/javascript">
+            $('#outerfooter').load('./index.html #footer');
+        </script>
+	</div>
+</div> <!-- /wrapper -->
+
+
+</body>
+</html>

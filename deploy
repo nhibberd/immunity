@@ -1,0 +1,15 @@
+#!/bin/sh
+
+name=`./build | tail -1`
+tar=gen/dist/*.tar.gz
+tarname=`basename $tar`
+scp $tar im:.
+
+ssh im <<EOF
+  tar xfz $tarname
+  [ -x /home/nick/app/bin/stop ] && /home/nick/app/bin/stop
+  rm /home/nick/app
+  ln -s /home/nick/$name /home/nick/app
+  /home/nick/app/bin/start
+  rm /home/nick/*.tar.gz
+EOF

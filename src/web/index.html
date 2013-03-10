@@ -102,7 +102,7 @@
 
                     var title = $("<div class='posttitle'><a href=./article.html?id=" + posts[i].id + ">" + posts[i].title + "</a></div>")
                     var date = printDate(posts[i].timestamp);
-                    var footer = $("<div class='postfooter'><div class='comment_date'><img src='./img/icon_date.png' />" + date.substr(0,10) + "</div><div class='comment_link'><img src='./img/icon_comment.png' /><a href='#comment'>Comment</a></div><div class='comment_link'><img src='./img/icon_admin.png' /><a href='#'>Admin</a></div></div>");
+                    var footer = $("<div class='postfooter'><div class='comment_date'><img src='./img/icon_date.png' />" + date.substr(0,10) + "</div><div class='comment_link'><img src='./img/icon_comment.png' /><a href='./article.html?id=" + posts[i].id + "#comment'>Comment</a></div><div class='comment_link'><img src='./img/icon_admin.png' /><a href='#'>Admin</a></div></div>");
                     if(posts[i].type=="article") {
                     var post = $("<div class='postcontent' style='min-height: 180;'><img align='left' style='margin: 3px 10px 5px 0;' src='./img/lina.png' />" + posts[i].content + "</div>");
                     $(blog).append(title);

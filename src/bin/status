@@ -1,0 +1,20 @@
+#!/bin/sh
+
+bin="`dirname $0`"
+base="$bin/.."
+
+: ${IMMUNITY_PID:=$base/var/run/immunity.pid}
+
+if [ -f "$IMMUNITY_PID" ]; then
+   if ps waux | awk '{print $2}' | grep -q `cat "$IMMUNITY_PID"`; then
+     echo "[RUNNING]"
+     exit 0
+   else
+     rm "$IMMUNITY_PID"
+     echo "[STOPPED]"
+     exit 1
+   fi
+else
+  echo "[STOPPED]"
+  exit 1
+fi
