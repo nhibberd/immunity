@@ -7,9 +7,9 @@ scp $tar im:.
 
 ssh im <<EOF
   tar xfz $tarname
-  [ -x /home/nick/app/bin/stop ] && /home/nick/app/bin/stop
-  rm /home/nick/app
-  ln -s /home/nick/$name /home/nick/app
-  /home/nick/app/bin/start
-  rm /home/nick/*.tar.gz
+  [ -x /home/immunity/app/bin/stop ] && /home/immunity/app/bin/stop
+  rm /home/immunity/app
+  ln -s /home/immunity/$name /home/immunity/app
+  /home/immunity/app/bin/start
+  rm /home/immunity/*.tar.gz
 EOF
