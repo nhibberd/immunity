@@ -52,6 +52,7 @@ src/main/immunity/http/marshall/FunctionMarshaller.java
 src/main/immunity/http/marshall/Marshaller.java
 src/main/immunity/http/marshall/ResultFunctionMarshaller.java
 src/main/immunity/http/marshall/ReturnMarshaller.java
+src/main/immunity/http/marshall/UploadMarshaller.java
 src/main/immunity/http/servlet/FileBasicWebServlet.java
 src/main/immunity/http/servlet/Servlet.java
 src/main/immunity/http/state/LoginState.java

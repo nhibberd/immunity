@@ -210,7 +210,7 @@
                     <li class="form-line">
                         <div class="form-input-wide">
                             <div style="margin-left:156px" class="form-buttons-wrapper">
-                                <button type="submit" class="form-submit-button">
+                                <button type="submit" class="form-submit-button" >
                                     Submit
                                 </button>
                             </div>
@@ -269,6 +269,19 @@
 
 
             $("#postform").submit(function(){
+                console.log(document.getElementById('file').files[0])
+
+
+                  formdata.append("sampleText", sampleText);
+
+                formdata.append("sampleFile", sampleFile);
+
+                var xhr = new XMLHttpRequest();       
+
+                xhr.open("POST","/immunity/addblog", true);
+
+                xhr.send(formdata);
+/*
             var messageObj = { title: document.getElementById('newposttitle').value, content:  document.getElementById('newpostcontent').value,
             type: document.getElementById('newposttype').value, link: document.getElementById('newpostlink').value }
 
@@ -288,7 +301,7 @@
             }
             });
             })
-
+*/
         </script>
 
     </div> <!-- /content -->

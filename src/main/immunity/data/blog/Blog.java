@@ -11,8 +11,9 @@ public class Blog implements FromDb<Blog> {
     public Long timestamp;
     public Integer id;
     public Integer authorid;
+    public String image;
 
-    public Blog(String title, String content, String type, String link, Long timestamp, Integer id, Integer authorid) {
+    public Blog(String title, String content, String type, String link, Long timestamp, Integer id, Integer authorid, String image) {
         this.title = title;
         this.content = content;
         this.type = type;
@@ -20,6 +21,7 @@ public class Blog implements FromDb<Blog> {
         this.timestamp = timestamp;
         this.id = id;
         this.authorid = authorid;
+        this.image = image;
     }
 
     public Blog() {
@@ -27,7 +29,7 @@ public class Blog implements FromDb<Blog> {
 
     public Blog from(EdgeResultSet resultSet) {
         return new Blog(resultSet.getString(1),resultSet.getString(2),resultSet.getString(3),resultSet.getString(4)
-                ,resultSet.getLong(5),resultSet.getInt(6),resultSet.getInt(7));
+                ,resultSet.getLong(5),resultSet.getInt(6),resultSet.getInt(7), resultSet.getString(8));
 
     }
 }

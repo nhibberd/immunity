@@ -13,10 +13,7 @@ import immunity.data.basic.IntegerHolder;
 import immunity.data.blog.Blog;
 import immunity.data.core.*;
 import immunity.http.LoginService;
-import immunity.http.marshall.ActionMarshaller;
-import immunity.http.marshall.AuthMarshaller;
-import immunity.http.marshall.ResultFunctionMarshaller;
-import immunity.http.marshall.ReturnMarshaller;
+import immunity.http.marshall.*;
 import immunity.service.AddBlog;
 import immunity.service.*;
 import immunity.db.Connector;
@@ -36,7 +33,8 @@ public class Servlet extends HttpServlet {
     private static final Connector connector =  new Connector("jdbc:postgresql://localhost/immunity", "immunity", "pussytown");
     final String blog="/getblog/", addblog="/addblog/", article="/getarticle/", acomment="/addcomment/",
             gcomment="/getcomment/", gdivision="/getdivision/", aplayer="/addplayer/", adivision="/adddivision/",
-            asponsor="/addsponsor/", gsponsor="/getsponsors/", loginpath="/login/", logout="/logout/" ;
+            asponsor="/addsponsor/", gsponsor="/getsponsors/", loginpath="/login/", logout="/logout/",
+            uploadpath="/upload/" ;
 
 
     private <B>ReturnMarshaller<B> b(ResultFunction<Connection, B> service) {
@@ -61,20 +59,18 @@ public class Servlet extends HttpServlet {
     private ActionMarshaller<Comments> addcomment = actionMarshaller(Comments.class, new AddComment());
     private ResultFunctionMarshaller<IntegerHolder, List<Comments>> getcomment = r(IntegerHolder.class, new GetComment());
     private ResultFunctionMarshaller<StringHolder, RDivision> getdivision = r(StringHolder.class, new GetDivision());
-
     private ActionMarshaller<Division> adddivision = actionMarshaller(Division.class, new AddDivision());
     private ActionMarshaller<Player> addplayer = actionMarshaller(Player.class, new AddPlayer());
-
     private ActionMarshaller<Sponsor> addsponsor = actionMarshaller(Sponsor.class, new AddSponsor());
     private ReturnMarshaller<List<Sponsor>> getsponsor = b(new GetSponsor());
+
     //auth
     private AuthMarshaller<Login, immunity.data.auth.Cookie> login = ab(Login.class, new LoginService());
 
-
-
+    //upload
+    private UploadMarshaller upload = new UploadMarshaller();
 
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         if (request(req, blog))
             getblog.marshal(resp);
         if (request(req, addblog))
@@ -97,6 +93,8 @@ public class Servlet extends HttpServlet {
             getsponsor.marshal(resp);
         if (request(req, loginpath))
             login.login(req, resp);
+        if (request(req, uploadpath))
+            upload.marshal(req, resp);
         if (!cookieAuth(req, resp)){
             login.notauth(resp);
             return;
@@ -142,7 +140,7 @@ public class Servlet extends HttpServlet {
 
     private Boolean checkpublic(String path){
         return (path.equals(blog) || path.equals(loginpath) || path.equals(article) ||
-                path.equals(gsponsor) || path.equals(gdivision));
+                path.equals(gsponsor) || path.equals(gdivision) || path.equals(uploadpath));
     }
 
     private boolean request(HttpServletRequest request, String path){

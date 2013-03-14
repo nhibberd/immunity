@@ -41,14 +41,6 @@ public class Immunity {
             public void apply(Connection connection) {
                 try {
                     final toro.Db database = new toro.Db();
-                    AddBlog addBlog = new AddBlog();
-                    addBlog.apply(connection, new Blog("BEZ", "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,", "article", "", (long) 0, 0,0  ));
-                    AddComment addComment = new AddComment();
-                    String dmp = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s,";
-                    addComment.apply(connection, new Comments(1,1,0,dmp,(long) 0));
-                    addComment.apply(connection, new Comments(1,2,0,dmp,(long) 0));
-                    addComment.apply(connection, new Comments(1,3,0,dmp,(long) 0));
-                    addComment.apply(connection, new Comments(1, 4, 0, dmp, (long) 0));
                     AddDivision addDivision = new AddDivision();
                     addDivision.apply(connection, new Division(0,"csgo","this game is bananas", "./img/game_csgo.png"));
                     addDivision.apply(connection, new Division(1, "bf3", "this game is sux", "./img/game_bf3.png"));
