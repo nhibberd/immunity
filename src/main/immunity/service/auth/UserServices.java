@@ -1,20 +1,16 @@
 package immunity.service.auth;
 
 import immunity.data.auth.User;
-import immunity.data.core.Function;
 import immunity.data.core.Result;
-import immunity.data.core.Status;
-import immunity.db.EdgePreparedStatement;
 import immunity.db.Statement;
 import toro.Option;
 
 import java.security.NoSuchAlgorithmException;
 import java.security.SecureRandom;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 
 import static immunity.tool.Base64.byteToBase64;
-import static toro.Getters.*;
+import static toro.Getters.getInteger;
 
 public class UserServices {
     private final LoginServices service = new LoginServices();

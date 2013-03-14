@@ -1,8 +1,5 @@
 package immunity.data;
 
-import toro.EdgeResultSet;
-import toro.FromDb;
-
 import java.util.List;
 
 public class RDivision {

@@ -3,16 +3,12 @@ package immunity.service;
 import immunity.data.Division;
 import immunity.data.Player;
 import immunity.data.RDivision;
-import immunity.data.basic.IntegerHolder;
 import immunity.data.basic.StringHolder;
-import immunity.data.blog.Blog;
 import immunity.data.core.Result;
-import immunity.data.core.ResultFunction;
 import immunity.data.core.ResultFunction2;
 import toro.Option;
 
 import java.sql.Connection;
-import java.util.Collections;
 import java.util.List;
 
 public class GetDivision implements ResultFunction2<Connection,StringHolder,RDivision> {

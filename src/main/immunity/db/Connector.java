@@ -3,7 +3,6 @@ package immunity.db;
 import immunity.data.core.Action;
 import immunity.data.core.Function;
 import immunity.data.error.ServerException;
-import immunity.data.core.Function;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

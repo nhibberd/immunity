@@ -2,15 +2,12 @@ package immunity.service.auth.password;
 
 import immunity.data.auth.Token;
 import immunity.data.auth.TokenAge;
-import immunity.data.core.Function;
 import immunity.data.core.Function2;
 import immunity.data.core.Status;
-import immunity.db.EdgePreparedStatement;
 import immunity.service.auth.LoginServices;
 import toro.Option;
 
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 
 import static immunity.tool.Dates.HOUR;
 import static immunity.tool.Validations.checkAge;

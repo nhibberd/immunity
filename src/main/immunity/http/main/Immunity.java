@@ -4,19 +4,17 @@ package immunity.http.main;
 import immunity.data.Division;
 import immunity.data.Player;
 import immunity.data.Sponsor;
-import immunity.data.blog.Blog;
-import immunity.data.blog.Comments;
 import immunity.data.core.Action;
 import immunity.data.database.Versions;
 import immunity.db.Connector;
 import immunity.http.servlet.FileBasicWebServlet;
 import immunity.http.servlet.Servlet;
-import immunity.service.*;
+import immunity.service.AddDivision;
+import immunity.service.AddPlayer;
+import immunity.service.AddSponsor;
 import io.mth.foil.j.*;
 
 import java.sql.Connection;
-
-import static immunity.tool.Generators.generatorAge;
 
 
 public class Immunity {

@@ -1,10 +1,9 @@
 package immunity.db;
 
-import immunity.data.blog.Blog;
 import immunity.data.core.Action;
 import immunity.data.core.Function;
-import immunity.data.core.Status;
 import immunity.data.core.Result;
+import immunity.data.core.Status;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

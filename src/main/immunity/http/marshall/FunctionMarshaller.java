@@ -1,9 +1,9 @@
 package immunity.http.marshall;
 
+import com.google.gson.Gson;
 import immunity.data.core.*;
 import immunity.data.core.Error;
 import immunity.db.Connector;
-import com.google.gson.Gson;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

@@ -1,8 +1,7 @@
 package immunity.http.marshall;
 
-import immunity.data.blog.Blog;
-import immunity.data.core.*;
 import com.google.gson.Gson;
+import immunity.data.core.*;
 import immunity.data.core.Error;
 import immunity.db.Connector;
 
@@ -10,9 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 public class ReturnMarshaller<B> {
     private final Gson gson = new Gson();

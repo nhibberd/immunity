@@ -2,10 +2,9 @@ package immunity.service.auth;
 
 import immunity.data.auth.Token;
 import immunity.data.auth.TokenAge;
-import immunity.data.core.Function;
-import immunity.data.core.Result;
-import immunity.data.core.Status;
 import immunity.data.auth.User;
+import immunity.data.core.Function;
+import immunity.data.core.Status;
 import immunity.db.Connector;
 import immunity.db.EdgePreparedStatement;
 import immunity.db.EdgeResultSet;
@@ -16,11 +15,9 @@ import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.util.Arrays;
 
-import static immunity.tool.Base64.base64ToByte;
-import static toro.Getters.*;
+import static toro.Getters.getString;
 
 
 public class LoginServices {

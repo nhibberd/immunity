@@ -3,14 +3,16 @@ package immunity.http;
 import immunity.data.auth.Cookie;
 import immunity.data.auth.Login;
 import immunity.data.auth.LoginNugget;
-import immunity.data.auth.User;
 import immunity.data.core.Function2;
 import immunity.data.core.Status;
 import immunity.service.auth.LoginServices;
-//import immunity.service.auth.UserServices;
+
 import java.sql.Connection;
 import java.util.Date;
+
 import static immunity.http.state.LoginState.records;
+
+//import immunity.service.auth.UserServices;
 
 public class LoginService implements Function2<Connection,Login,Cookie> {
     private final LoginServices service = new LoginServices();

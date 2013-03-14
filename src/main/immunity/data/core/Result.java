@@ -1,6 +1,6 @@
 package immunity.data.core;
 
-import immunity.data.error.*;
+import immunity.data.error.ServerException;
 
 public class Result<T>{
     private final Status status;

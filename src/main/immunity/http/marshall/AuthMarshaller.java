@@ -1,10 +1,10 @@
 package immunity.http.marshall;
 
+import com.google.gson.Gson;
 import immunity.data.core.Empty;
 import immunity.data.core.Error;
 import immunity.data.core.Function;
 import immunity.data.core.Function2;
-import com.google.gson.Gson;
 import immunity.db.Connector;
 
 import javax.servlet.http.Cookie;

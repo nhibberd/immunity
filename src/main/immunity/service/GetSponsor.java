@@ -1,7 +1,6 @@
 package immunity.service;
 
 import immunity.data.Sponsor;
-import immunity.data.blog.Blog;
 import immunity.data.core.Result;
 import immunity.data.core.ResultFunction;
 
