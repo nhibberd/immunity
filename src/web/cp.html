@@ -104,7 +104,7 @@
                     <li class="form-line">
                         <div class="form-input-wide">
                             <div style="margin-left:156px" class="form-buttons-wrapper">
-                                <button type="submit" class="form-submit-button" onclick="return addblog();">
+                                <button type="submit" class="form-submit-button" onclick="return ajaxFileUpload();">
                                     Submit
                                 </button>
                             </div>
@@ -275,27 +275,21 @@
             }
 
 
-            function addblog(){
-                var filename = getFilename(document.getElementById('fileToUpload').value);
+            function blog(x){ 
+
+                var filename = getFilename(x);
 
                 var messageObj = { title: document.getElementById('newposttitle').value, content:  document.getElementById('newpostcontent').value,
                 type: document.getElementById('newposttype').value, link: document.getElementById('newpostlink').value, image: filename }
 
-                ajaxFileUpload()
-                blog(messageObj);
-
-            }
-
-            function blog(msg){ 
-                console.log("adding blog");
                 $.ajax({
                 url: "/immunity/addblog/",
                 type: "POST",
-                data: JSON.stringify(msg),
+                data: JSON.stringify(messageObj),
                 cache: false,
                 success: function(response, status, obj){
                 if(obj.status == "OK" || obj.status == 200) {
-                alert("YAY")
+                console.log("YAY")
                 }
                 },
                 error: function(obj) {
@@ -303,11 +297,12 @@
                 }
                 }
                 });
+                    return  false;
             }
 
              function ajaxFileUpload()
                 {
-                    console.log("uploading...")
+                    var filex = document.getElementById('fileToUpload').value;
                     $.ajaxFileUpload
                     (
                         {
@@ -315,26 +310,18 @@
                             secureuri:false,
                             fileElementId:'fileToUpload',
                             dataType: 'json',
-                            success: function (data, status)
-                            {
-                                if(typeof(data.error) != 'undefined')
-                                {
-                                    if(data.error != '')
-                                    {
-                                        alert(data.error);
-                                    }else
-                                    {
-                                        alert(data.msg);
-                                    }
+                            success: function (response, status, obj){                            
+                                if(obj.status == "OK" || obj.status == 200) {
+                                console.log("YAY")
                                 }
                             },
-                            error: function (data, status, e)
-                            {
-                                alert(e);
+                            error: function(obj) {
+                                if(obj.status == "OK" || obj.status == 200) {
+                                }
                             }
                         }
                     )
-                    return  false;
+                    return blog(filex);
                 } 
         </script>
 

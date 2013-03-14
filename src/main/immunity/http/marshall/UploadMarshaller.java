@@ -29,7 +29,8 @@ public class UploadMarshaller {
                         String filename = FilenameUtils.getName(item.getName());
                         InputStream filecontent = item.openStream();
                         //todo fix
-                        File p = new File("C:\\tmp\\" + filename);
+                        //File p = new File("C:\\tmp\\" + filename);
+                        File p = new File("/home/immunity/app/web/img/" + filename);
                         FileOutputStream out = new FileOutputStream(p);
 
 
@@ -46,8 +47,9 @@ public class UploadMarshaller {
                     }
                     write(resp, empty, HttpServletResponse.SC_OK);
                 }
+            } else {
+                write(resp, empty, HttpServletResponse.SC_BAD_REQUEST);
             }
-            write(resp, empty, HttpServletResponse.SC_BAD_REQUEST);
 
         } catch (Exception e) {
             Error error = new Error(e.getClass().getSimpleName(), e.getMessage());

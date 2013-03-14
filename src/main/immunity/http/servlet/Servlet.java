@@ -73,6 +73,8 @@ public class Servlet extends HttpServlet {
     private UploadMarshaller upload = new UploadMarshaller();
 
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("req.getPathInfo() = " + req.getPathInfo());
+
         if (request(req, blog))
             getblog.marshal(resp);
         if (request(req, addblog))
@@ -142,7 +144,7 @@ public class Servlet extends HttpServlet {
 
     private Boolean checkpublic(String path){
         return (path.equals(blog) || path.equals(loginpath) || path.equals(article) ||
-                path.equals(gsponsor) || path.equals(gdivision) || path.equals(uploadpath));
+                path.equals(gsponsor) || path.equals(gdivision) || path.equals(uploadpath) || path.equals(addblog));
     }
 
     private boolean request(HttpServletRequest request, String path){
