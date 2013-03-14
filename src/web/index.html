@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -5,6 +6,9 @@
 
     <link href="./css/main.css" rel="stylesheet">
     <script src="./js/jquery-1.7.2.min.js"></script>
+
+    <div class="hidden">
+</div>
 
 
 
@@ -79,14 +83,62 @@
                     }
                     });
 
+
+
+
                     function printDate(i) {
                     var temp = new Date(i);
-                    var dateStr = padStr(temp.getDate() + ".") +
-                    padStr(1 + temp.getMonth()+ ".") +
-                    padStr(temp.getFullYear());
+                    var dateStr = padStr( day(temp.getMonth())  + " ") +
+                    padStr(1 + temp.getDate() + ", ") +
+                    padStr(temp.getFullYear() + " at ") +
+                    padStr(temp.getHours() + ":") +
+                    padStr(temp.getMinutes());
 
                     return dateStr
                     }
+                    
+                    function day(i) {
+                        switch (i) {
+                            case 0:
+                                return "January";
+                                break;
+                            case 1:
+                                return "February";
+                                break;
+                            case 2:
+                                return "March";
+                                break;
+                            case 3:
+                                return "April";
+                                break;
+                            case 4:
+                                return "May";
+                                break;
+                            case 5:
+                                return "June";
+                                break;
+                            case 6:
+                                return "July";
+                                break;
+                            case 7:
+                                return "August";
+                                break;
+                            case 8:
+                                return "September";
+                                break;
+                            case 9:
+                                return "October";
+                                break;
+                            case 10:
+                                return "November";
+                                break;
+                            case 11:
+                                return "December";
+                                break;
+                        }
+                    }
+
+
 
                     function padStr(i) {
                     return (i < 10) ? "0" + i : "" + i;
@@ -102,7 +154,7 @@
 
                     var title = $("<div class='posttitle'><a href=./article.html?id=" + posts[i].id + ">" + posts[i].title + "</a></div>")
                     var date = printDate(posts[i].timestamp);
-                    var footer = $("<div class='postfooter'><div class='comment_date'><img src='./img/icon_date.png' />" + date.substr(0,10) + "</div><div class='comment_link'><img src='./img/icon_comment.png' /><a href='./article.html?id=" + posts[i].id + "#comment'>Comment</a></div><div class='comment_link'><img src='./img/icon_admin.png' /><a href='#'>Admin</a></div></div>");
+                    var footer = $("<div class='postfooter'><div class='comment_date'><img src='./img/icon_date.png' />" + date + "</div><div class='comment_link'><img src='./img/icon_comment.png' /><a href='./article.html?id=" + posts[i].id + "#comment'>Comment</a></div><div class='comment_link'><img src='./img/icon_admin.png' /><a href='#'>Admin</a></div></div>");
                     if(posts[i].type=="article") {
                     var post = $("<div class='postcontent' style='min-height: 180;'><img align='left' style='margin: 3px 10px 5px 0;' src='./img/lina.png' />" + posts[i].content + "</div>");
                     $(blog).append(title);
@@ -111,7 +163,7 @@
                     var post = $("<div class='postcontent'><img align='top' style='margin: 3px 0px 5px 0;' src='./img/gigabyte.png' /></div>");
                     }
                     if(posts[i].type=="video") {
-                    var post = $("<div class='postcontent'><iframe width='640' height='360' src=" + posts[i].link + " frameborder='0' allowfullscreen></div>");
+                    var post = $("<div class='postcontent'><iframe width='640' height='360' src='http://www.youtube.com/embed/" + posts[i].link + "' frameborder='0' allowfullscreen></div>");
                     }
 
                     $(blog).append(post)
@@ -138,16 +190,21 @@
 
             <div id="rightnav">
                 <div id="divisions" class="rightnav">
+
                     <div style="padding: 5px 0;"> Divisions </div>
-                    <div class="img"><a class="csgoimg" href="divisions.html?name=csgo"></a></div>
-                    <div class="img"><a class="bf3img" href="divisions.html?name=bf3"></a></div>
-                    <div class="img"><a class="lolimg" href="divisions.html?name=lol"></a></div>
-                    <div class="img"><a class="haloimg" href="divisions.html?name=halo"></a></div>
-                    <div class="img"><a class="fifaimg" href="divisions.html?name=fifa"></a></div>
-                    <div class="img"><a class="sc2img" href="divisions.html?name=sc2"></a></div>
-                    <div class="img"><a class="tf2img" href="divisions.html?name=tf2"></a></div>
-                    <div class="img"><a class="codimg" href="divisions.html?name=cod"></a></div>
+                    <div class="img"><a id="csgoimg" href="divisions.html?name=csgo"></a></div>
+                    <div class="img"><a id="bf3img" href="divisions.html?name=bf3"></a></div>
+                    <div class="img"><a id="lolimg" href="divisions.html?name=lol"></a></div>
+                    <div class="img"><a id="haloimg" href="divisions.html?name=halo"></a></div>
+                    <div class="img"><a id="fifaimg" href="divisions.html?name=fifa"></a></div>
+                    <div class="img"><a id="sc2img" href="divisions.html?name=sc2"></a></div>
+                    <div class="img"><a id="tf2img" href="divisions.html?name=tf2"></a></div>
+                    <div class="img"><a id="codimg" href="divisions.html?name=cod"></a></div>
                     <div style="height: 3px;" class="rightnav"> <!-- spacer --> </div>
+
+
+
+
                 </div>
 
                 <div id="twitter" class="rightnavtop">

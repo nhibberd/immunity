@@ -11,7 +11,8 @@ public class AddBlog implements Action2<Connection,Blog> {
 
     public void apply(Connection connection, Blog data) {
         data.timestamp = generatorAge();
+        String linkid = data.link.substring(data.link.lastIndexOf('/') + 1);
         database.updateObjects(connection,"INSERT INTO \"blog\"( title, content, type, link, timestamp) VALUES (?, ?, ?, ?, ?)",
-                data.title,data.content, data.type, data.link, data.timestamp);
+                data.title,data.content, data.type, linkid, data.timestamp);
     }
 }

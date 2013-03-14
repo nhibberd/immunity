@@ -1,4 +1,4 @@
-package main.immunity.tool;
+package immunity.tool;
 
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;

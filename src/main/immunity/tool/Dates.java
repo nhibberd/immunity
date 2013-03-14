@@ -1,4 +1,4 @@
-package main.immunity.tool;
+package immunity.tool;
 
 public class Dates {
     public static final long SECOND = 1000;

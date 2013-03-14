@@ -3,9 +3,9 @@
 name=`./build | tail -1`
 tar=gen/dist/*.tar.gz
 tarname=`basename $tar`
-scp $tar im:.
+scp $tar immunity@im:.
 
-ssh im <<EOF
+ssh immunity@im <<EOF
   tar xfz $tarname
   [ -x /home/immunity/app/bin/stop ] && /home/immunity/app/bin/stop
   rm /home/immunity/app
